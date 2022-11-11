@@ -41,15 +41,17 @@ func RunReport(
 		} else {
 			result.Rows = append(result.Rows, resp.Rows...)
 
-			result.PropertyQuota.ConcurrentRequests = resp.PropertyQuota.ConcurrentRequests
-			result.PropertyQuota.PotentiallyThresholdedRequestsPerHour = resp.PropertyQuota.PotentiallyThresholdedRequestsPerHour
-			result.PropertyQuota.ServerErrorsPerProjectPerHour = resp.PropertyQuota.ServerErrorsPerProjectPerHour
-			result.PropertyQuota.TokensPerDay.Consumed += resp.PropertyQuota.TokensPerDay.Consumed
-			result.PropertyQuota.TokensPerDay.Remaining = resp.PropertyQuota.TokensPerDay.Remaining
-			result.PropertyQuota.TokensPerHour.Consumed += resp.PropertyQuota.TokensPerHour.Consumed
-			result.PropertyQuota.TokensPerHour.Remaining = resp.PropertyQuota.TokensPerHour.Remaining
-			result.PropertyQuota.TokensPerProjectPerHour.Consumed += resp.PropertyQuota.TokensPerProjectPerHour.Consumed
-			result.PropertyQuota.TokensPerProjectPerHour.Remaining = resp.PropertyQuota.TokensPerProjectPerHour.Remaining
+			if request.ReturnPropertyQuota {
+				result.PropertyQuota.ConcurrentRequests = resp.PropertyQuota.ConcurrentRequests
+				result.PropertyQuota.PotentiallyThresholdedRequestsPerHour = resp.PropertyQuota.PotentiallyThresholdedRequestsPerHour
+				result.PropertyQuota.ServerErrorsPerProjectPerHour = resp.PropertyQuota.ServerErrorsPerProjectPerHour
+				result.PropertyQuota.TokensPerDay.Consumed += resp.PropertyQuota.TokensPerDay.Consumed
+				result.PropertyQuota.TokensPerDay.Remaining = resp.PropertyQuota.TokensPerDay.Remaining
+				result.PropertyQuota.TokensPerHour.Consumed += resp.PropertyQuota.TokensPerHour.Consumed
+				result.PropertyQuota.TokensPerHour.Remaining = resp.PropertyQuota.TokensPerHour.Remaining
+				result.PropertyQuota.TokensPerProjectPerHour.Consumed += resp.PropertyQuota.TokensPerProjectPerHour.Consumed
+				result.PropertyQuota.TokensPerProjectPerHour.Remaining = resp.PropertyQuota.TokensPerProjectPerHour.Remaining
+			}
 		}
 
 		result.RequestedCount++
