@@ -19,14 +19,14 @@ import (
 propertyID := "properties/xxx"
 dimensions := []string{"date"}
 metrics := []string{"sessions"}
-response, err := ga4data.RunReport(ctx, service, propertyID, ga4data.CreateRunReportRequest{
+response, err := ga4data.RunReport(ctx, service, propertyID, ga4data.CreateRunReportRequest(
 	analyticsdata.DateRange{
 		StartDate: "2022-10-01",
 		EndDate: "2022-10-01",
 	},
 	ga4data.RunReportRequestWithDimensions(dimensions),
 	ga4data.RunReportRequestWithMetrics(metrics),
-})
+))
 
 // do as you want
 ```
