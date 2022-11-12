@@ -37,8 +37,8 @@ func run() error {
 		return err
 	}
 
-	dimensions := []string{"date"}
-	metrics := []string{"sessions"}
+	dimensions := []string{ga4data.DimensionDate}
+	metrics := []string{ga4data.MetricSessions}
 	response, err := ga4data.RunReport(ctx, service, propertyID, ga4data.CreateRunReportRequest(
 		analyticsdata.DateRange{
 			StartDate: "2022-10-01",
