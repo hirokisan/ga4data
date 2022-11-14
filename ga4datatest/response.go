@@ -12,7 +12,7 @@ func RunReportResponseBody(options ...func(*analyticsdata.RunReportResponse)) []
 		DimensionHeaders: []*analyticsdata.DimensionHeader{},
 		MetricHeaders:    []*analyticsdata.MetricHeader{},
 		Rows:             []*analyticsdata.Row{},
-		RowCount:         int64(100),
+		RowCount:         int64(0),
 		PropertyQuota:    &analyticsdata.PropertyQuota{},
 	}
 	for _, option := range options {
