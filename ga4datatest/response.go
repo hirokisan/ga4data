@@ -80,3 +80,12 @@ func RunReportResponseBodyWithRowCount(count int64) func(*analyticsdata.RunRepor
 		res.RowCount = count
 	}
 }
+
+// RunReportResponseBodyWithQuota :
+func RunReportResponseBodyWithQuota(
+	quota analyticsdata.PropertyQuota,
+) func(*analyticsdata.RunReportResponse) {
+	return func(res *analyticsdata.RunReportResponse) {
+		res.PropertyQuota = &quota
+	}
+}
