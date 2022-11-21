@@ -45,6 +45,7 @@ func run() error {
 			EndDate:   "2022-10-01",
 		},
 		ga4data.RunReportRequestWithDimensions(dimensions),
+		ga4data.RunReportRequestWithMetricAggregations([]string{"MINIMUM", "MAXIMUM"}),
 		ga4data.RunReportRequestWithMetrics(metrics),
 		ga4data.RunReportRequestWithPropertyQuota(),
 	))

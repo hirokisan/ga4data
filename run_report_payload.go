@@ -62,6 +62,13 @@ func Dimensions(dimensions []string) []*analyticsdata.Dimension {
 	return dims
 }
 
+// RunReportRequestWithMetricAggregations :
+func RunReportRequestWithMetricAggregations(values []string) func(*analyticsdata.RunReportRequest) {
+	return func(req *analyticsdata.RunReportRequest) {
+		req.MetricAggregations = values
+	}
+}
+
 // Metrics :
 func Metrics(metrics []string) []*analyticsdata.Metric {
 	mets := make([]*analyticsdata.Metric, len(metrics))
