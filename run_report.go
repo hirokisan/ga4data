@@ -19,6 +19,34 @@ type RunReportResponse struct {
 	RequestedCount int
 }
 
+// MergeResponse :
+func (r *RunReportResponse) MergeResponse(resp *analyticsdata.RunReportResponse) {
+	if r.RunReportResponse == nil {
+		r.RunReportResponse = resp
+		return
+	}
+	r.Rows = append(r.Rows, resp.Rows...)
+
+	if quota := resp.PropertyQuota; quota != nil {
+		r.PropertyQuota.ConcurrentRequests = quota.ConcurrentRequests
+		r.PropertyQuota.PotentiallyThresholdedRequestsPerHour = quota.PotentiallyThresholdedRequestsPerHour
+		r.PropertyQuota.ServerErrorsPerProjectPerHour = quota.ServerErrorsPerProjectPerHour
+
+		if quota := quota.TokensPerDay; quota != nil {
+			r.PropertyQuota.TokensPerDay.Consumed += quota.Consumed
+			r.PropertyQuota.TokensPerDay.Remaining = quota.Remaining
+		}
+		if quota := quota.TokensPerHour; quota != nil {
+			r.PropertyQuota.TokensPerHour.Consumed += quota.Consumed
+			r.PropertyQuota.TokensPerHour.Remaining = quota.Remaining
+		}
+		if quota := quota.TokensPerProjectPerHour; quota != nil {
+			r.PropertyQuota.TokensPerProjectPerHour.Consumed += quota.Consumed
+			r.PropertyQuota.TokensPerProjectPerHour.Remaining = quota.Remaining
+		}
+	}
+}
+
 // RunReport :
 func RunReport(
 	ctx context.Context,
@@ -36,24 +64,8 @@ func RunReport(
 		if err != nil {
 			return nil, err
 		}
-		if result.RequestedCount == 0 {
-			result.RunReportResponse = resp
-		} else {
-			result.Rows = append(result.Rows, resp.Rows...)
 
-			if request.ReturnPropertyQuota {
-				result.PropertyQuota.ConcurrentRequests = resp.PropertyQuota.ConcurrentRequests
-				result.PropertyQuota.PotentiallyThresholdedRequestsPerHour = resp.PropertyQuota.PotentiallyThresholdedRequestsPerHour
-				result.PropertyQuota.ServerErrorsPerProjectPerHour = resp.PropertyQuota.ServerErrorsPerProjectPerHour
-				result.PropertyQuota.TokensPerDay.Consumed += resp.PropertyQuota.TokensPerDay.Consumed
-				result.PropertyQuota.TokensPerDay.Remaining = resp.PropertyQuota.TokensPerDay.Remaining
-				result.PropertyQuota.TokensPerHour.Consumed += resp.PropertyQuota.TokensPerHour.Consumed
-				result.PropertyQuota.TokensPerHour.Remaining = resp.PropertyQuota.TokensPerHour.Remaining
-				result.PropertyQuota.TokensPerProjectPerHour.Consumed += resp.PropertyQuota.TokensPerProjectPerHour.Consumed
-				result.PropertyQuota.TokensPerProjectPerHour.Remaining = resp.PropertyQuota.TokensPerProjectPerHour.Remaining
-			}
-		}
-
+		result.MergeResponse(resp)
 		result.RequestedCount++
 
 		if resp.RowCount <= RunReportMaxRowsLimit*int64(result.RequestedCount) {
