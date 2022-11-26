@@ -1,3 +1,7 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/hirokisan/ga4data)](https://goreportcard.com/report/github.com/hirokisan/ga4data)
+[![golangci-lint](https://github.com/hirokisan/bybit/actions/workflows/golangci-lint.yml/badge.svg)](https://github.com/hirokisan/bybit/actions/workflows/golangci-lint.yml)
+[![test](https://github.com/hirokisan/bybit/actions/workflows/test.yml/badge.svg)](https://github.com/hirokisan/bybit/actions/workflows/test.yml)
+
 # ga4data
 
 ga4data is an client service wrapper of Google Analytics Data API (GA4) for the Go programming language.
