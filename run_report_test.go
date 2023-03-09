@@ -108,3 +108,31 @@ func TestRunReport(t *testing.T) {
 		assert.Equal(t, propertyQuota.TokensPerProjectPerHour.Consumed*int64(wantRequestedCount), resp.PropertyQuota.TokensPerProjectPerHour.Consumed)
 	})
 }
+
+func TestDimensionIndex(t *testing.T) {
+	targetColumn := DimensionDate
+	res := RunReportResponse{
+		RunReportResponse: &analyticsdata.RunReportResponse{
+			DimensionHeaders: []*analyticsdata.DimensionHeader{
+				{
+					Name: targetColumn,
+				},
+			},
+		},
+	}
+	assert.Equal(t, 0, res.DimensionIndex(targetColumn))
+}
+
+func TestMetricIndex(t *testing.T) {
+	targetColumn := MetricSessions
+	res := RunReportResponse{
+		RunReportResponse: &analyticsdata.RunReportResponse{
+			MetricHeaders: []*analyticsdata.MetricHeader{
+				{
+					Name: targetColumn,
+				},
+			},
+		},
+	}
+	assert.Equal(t, 0, res.MetricIndex(targetColumn))
+}
