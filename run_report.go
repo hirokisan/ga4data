@@ -2,6 +2,7 @@ package ga4data
 
 import (
 	"context"
+	"fmt"
 
 	analyticsdata "google.golang.org/api/analyticsdata/v1beta"
 )
@@ -45,6 +46,46 @@ func (r *RunReportResponse) MergeResponse(resp *analyticsdata.RunReportResponse)
 			r.PropertyQuota.TokensPerProjectPerHour.Remaining = quota.Remaining
 		}
 	}
+}
+
+// DimensionValue :
+func (r *RunReportResponse) DimensionValue(row *analyticsdata.Row, column string) analyticsdata.DimensionValue {
+	return *row.DimensionValues[r.DimensionIndex(column)]
+}
+
+// Dimension :
+func (r *RunReportResponse) Dimension(row *analyticsdata.Row, column string) string {
+	return r.DimensionValue(row, column).Value
+}
+
+// DimensionIndex :
+func (r *RunReportResponse) DimensionIndex(column string) int {
+	for i, header := range r.DimensionHeaders {
+		if column == header.Name {
+			return i
+		}
+	}
+	panic(fmt.Sprintf("column %s is not found", column))
+}
+
+// MetricValue :
+func (r *RunReportResponse) MetricValue(row *analyticsdata.Row, column string) analyticsdata.MetricValue {
+	return *row.MetricValues[r.MetricIndex(column)]
+}
+
+// Metric :
+func (r *RunReportResponse) Metric(row *analyticsdata.Row, column string) string {
+	return r.MetricValue(row, column).Value
+}
+
+// MetricIndex :
+func (r *RunReportResponse) MetricIndex(column string) int {
+	for i, header := range r.MetricHeaders {
+		if column == header.Name {
+			return i
+		}
+	}
+	panic(fmt.Sprintf("column %s is not found", column))
 }
 
 // RunReport :
