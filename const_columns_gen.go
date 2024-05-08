@@ -2,11 +2,11 @@
 package ga4data
 
 const (
-	// DimensionAchievementID : The achievement ID in a game for an event. Populated by the event parameter 'achievement_id'.
+	// DimensionAchievementID : The achievement ID in a game for an event. Populated by the event parameter `achievement_id`.
 	DimensionAchievementID = "achievementId"
-	// DimensionAdFormat : Describes the way ads looked and where they were located. Typical formats include 'Interstitial', 'Banner', 'Rewarded', and 'Native advanced'.
+	// DimensionAdFormat : Describes the way ads looked and where they were located. Typical formats include `Interstitial`, `Banner`, `Rewarded`, and `Native advanced`.
 	DimensionAdFormat = "adFormat"
-	// DimensionAdSourceName : The source network that served the ad. Typical sources include 'AdMob Network', 'Liftoff', 'Facebook Audience Network', and 'Mediated house ads'.
+	// DimensionAdSourceName : The source network that served the ad. Typical sources include `AdMob Network`, `Liftoff`, `Facebook Audience Network`, and `Mediated house ads`.
 	DimensionAdSourceName = "adSourceName"
 	// DimensionAdUnitName : The name you chose to describe this Ad unit. Ad units are containers you place in your apps to show ads to users.
 	DimensionAdUnitName = "adUnitName"
@@ -16,21 +16,65 @@ const (
 	DimensionAudienceID = "audienceId"
 	// DimensionAudienceName : The given name of an Audience. Users are reported in the audiences to which they belonged during the report's date range. Current user behavior does not affect historical audience membership in reports.
 	DimensionAudienceName = "audienceName"
-	// DimensionBrandingInterest : Interests demonstrated by users who are higher in the shopping funnel. Users can be counted in multiple interest categories. For example, 'Shoppers', 'Lifestyles & Hobbies/Pet Lovers', or 'Travel/Travel Buffs/Beachbound Travelers'.
+	// DimensionAudienceResourceName : The resource name of this audience. Resource names contain both collection & resource identifiers to uniquely identify a resource; to learn more, see [Resource names](//google.aip.dev/122).
+	DimensionAudienceResourceName = "audienceResourceName"
+	// DimensionBrandingInterest : Interests demonstrated by users who are higher in the shopping funnel. Users can be counted in multiple interest categories. For example, `Shoppers`, `Lifestyles & Hobbies/Pet Lovers`, or `Travel/Travel Buffs/Beachbound Travelers`.
 	DimensionBrandingInterest = "brandingInterest"
 	// DimensionBrowser : The browsers used to view your website.
 	DimensionBrowser = "browser"
-	// DimensionCampaignID : The identifier of the marketing campaign. Present only for conversion events. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
+	// DimensionCampaignID : The identifier of the marketing campaign. Present only for key events. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
 	DimensionCampaignID = "campaignId"
-	// DimensionCampaignName : The name of the marketing campaign. Present only for conversion events. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
+	// DimensionCampaignName : The name of the marketing campaign. Present only for key events. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
 	DimensionCampaignName = "campaignName"
-	// DimensionCharacter : The player character in a game for an event. Populated by the event parameter 'character'.
+	// DimensionCharacter : The player character in a game for an event. Populated by the event parameter `character`.
 	DimensionCharacter = "character"
 	// DimensionCity : The city from which the user activity originated.
 	DimensionCity = "city"
 	// DimensionCityID : The geographic ID of the city from which the user activity originated, derived from their IP address.
 	DimensionCityID = "cityId"
-	// DimensionCohort : The cohort's name in the request. A cohort is a set of users who started using your website or app in any consecutive group of days. If a cohort name is not specified in the request, cohorts are named by their zero based index: cohort_0, cohort_1, etc.
+	// DimensionCm360AccountID : The CM360 Account ID that led to the key event. Identifies the CM360 Account.
+	DimensionCm360AccountID = "cm360AccountId"
+	// DimensionCm360AccountName : The CM360 Account Name that led to the key event. A CM360 account consists of advertisers, sites, campaigns, and user profiles.
+	DimensionCm360AccountName = "cm360AccountName"
+	// DimensionCm360AdvertiserID : The CM360 Advertiser ID that led to the key event. A CM360 Advertiser contains a group of campaigns, creative assets, and other settings.
+	DimensionCm360AdvertiserID = "cm360AdvertiserId"
+	// DimensionCm360AdvertiserName : The CM360 Advertiser Name that led to the key event. A CM360 Advertiser contains a group of campaigns, creative assets, and other settings.
+	DimensionCm360AdvertiserName = "cm360AdvertiserName"
+	// DimensionCm360CampaignID : The CM360 Campaign ID that led to the key event. A CM360 campaign can be configured to specify when your ads run, what landing pages are used, and other properties.
+	DimensionCm360CampaignID = "cm360CampaignId"
+	// DimensionCm360CampaignName : The CM360 Campaign Name that led to the key event. A CM360 campaign can be configured to specify when your ads run, what landing pages are used, and other properties.
+	DimensionCm360CampaignName = "cm360CampaignName"
+	// DimensionCm360CreativeFormat : The CM360 Creative Format that led to the key event. CM360 creative formats are also referred to as creative types.
+	DimensionCm360CreativeFormat = "cm360CreativeFormat"
+	// DimensionCm360CreativeID : The CM360 Creative ID that led to the key event. Identifies a CM360 creative.
+	DimensionCm360CreativeID = "cm360CreativeId"
+	// DimensionCm360CreativeName : The CM360 Creative Name that led to the key event. The name given to a CM360 creative.
+	DimensionCm360CreativeName = "cm360CreativeName"
+	// DimensionCm360CreativeType : The CM360 Creative Type that led to the key event. A category of CM360 creatives like 'Display' or 'Tracking'. To learn more, see [manage creatives](https://support.google.com/campaignmanager/answer/3068258)
+	DimensionCm360CreativeType = "cm360CreativeType"
+	// DimensionCm360CreativeTypeID : The CM360 Creative Type ID that led to the key event. Identifies a CM360 creative type.
+	DimensionCm360CreativeTypeID = "cm360CreativeTypeId"
+	// DimensionCm360CreativeVersion : The CM360 Creative Version that led to the key event. The version number helps you keep track of multiple versions of your creative in your reports. If you upload a new asset to an existing creative, the version number is increased by one.
+	DimensionCm360CreativeVersion = "cm360CreativeVersion"
+	// DimensionCm360Medium : The CM360 Medium that led to the key event. The CM360 medium is also referred to as the placement cost structure.
+	DimensionCm360Medium = "cm360Medium"
+	// DimensionCm360PlacementCostStructure : The CM360 Placement Cost Structure that led to the key event. Placement cost structures regulate how media cost will be calculated. For example 'CPM'.
+	DimensionCm360PlacementCostStructure = "cm360PlacementCostStructure"
+	// DimensionCm360PlacementID : The CM360 Placement ID that led to the key event. Identifies a CM360 placement. A placement is the part of a website where your ad appears.
+	DimensionCm360PlacementID = "cm360PlacementId"
+	// DimensionCm360PlacementName : The CM360 Placement Name that led to the key event. The given name for a CM360 placement. A placement is the part of a website where your ad appears.
+	DimensionCm360PlacementName = "cm360PlacementName"
+	// DimensionCm360RenderingID : The CM360 Rendering ID that led to the key event. Identifies a CM360 creative.
+	DimensionCm360RenderingID = "cm360RenderingId"
+	// DimensionCm360SiteID : The CM360 Site ID that led to the key event. Identifies a CM360 site.
+	DimensionCm360SiteID = "cm360SiteId"
+	// DimensionCm360SiteName : The CM360 Site Name that led to the key event. The CM360 Site name from which the ad space was purchased.
+	DimensionCm360SiteName = "cm360SiteName"
+	// DimensionCm360Source : The CM360 Source that led to the key event. The CM360 source is also referred to as the site name.
+	DimensionCm360Source = "cm360Source"
+	// DimensionCm360SourceMedium : The CM360 Source Medium that led to the key event. A combination of the source and medium.
+	DimensionCm360SourceMedium = "cm360SourceMedium"
+	// DimensionCohort : The cohort's name in the request. A cohort is a set of users who started using your website or app in any consecutive group of days. If a cohort name is not specified in the request, cohorts are named by their zero based index such as cohort_0 and cohort_1.
 	DimensionCohort = "cohort"
 	// DimensionCohortNthDay : Day offset relative to the firstSessionDate for the users in the cohort. For example, if a cohort is selected with the start and end date of 2020-03-01, then for the date 2020-03-02, cohortNthDay will be 0001.
 	DimensionCohortNthDay = "cohortNthDay"
@@ -38,16 +82,22 @@ const (
 	DimensionCohortNthMonth = "cohortNthMonth"
 	// DimensionCohortNthWeek : Week offset relative to the firstSessionDate for the users in the cohort. Weeks start on Sunday and end on Saturday. For example, if a cohort is selected with the start and end date in the range 2020-11-08 to 2020-11-14, then for the dates in the range 2020-11-15 to 2020-11-21, cohortNthWeek will be 0001.
 	DimensionCohortNthWeek = "cohortNthWeek"
-	// DimensionContentGroup : A category that applies to items of published content. Populated by the event parameter 'content_group'.
+	// DimensionContentGroup : A category that applies to items of published content. Populated by the event parameter `content_group`.
 	DimensionContentGroup = "contentGroup"
-	// DimensionContentID : The identifier of the selected content. Populated by the event parameter 'content_id'.
+	// DimensionContentID : The identifier of the selected content. Populated by the event parameter `content_id`.
 	DimensionContentID = "contentId"
-	// DimensionContentType : The category of the selected content. Populated by the event parameter 'content_type'.
+	// DimensionContentType : The category of the selected content. Populated by the event parameter `content_type`.
 	DimensionContentType = "contentType"
+	// DimensionContinent : The continent from which the user activity originated. For example, `Americas` or `Asia`.
+	DimensionContinent = "continent"
+	// DimensionContinentID : The geographic ID of the continent from which the user activity originated, derived from their IP address.
+	DimensionContinentID = "continentId"
 	// DimensionCountry : The country from which the user activity originated.
 	DimensionCountry = "country"
 	// DimensionCountryID : The geographic ID of the country from which the user activity originated, derived from their IP address. Formatted according to ISO 3166-1 alpha-2 standard.
 	DimensionCountryID = "countryId"
+	// DimensionCurrencyCode : The local currency code (based on ISO 4217 standard) of the eCommerce event. For example, `USD` or `GBP`. Currency is specified in tagging by the `currency` parameter. Businesses that transact in more than one currency can specify a local currency code when sending eCommerce events to Analytics, and this dimension shows those currencies. To Learn more, See [Currency reference](https://support.google.com/analytics/answer/9796179).
+	DimensionCurrencyCode = "currencyCode"
 	// DimensionDate : The date of the event, formatted as YYYYMMDD.
 	DimensionDate = "date"
 	// DimensionDateHour : The combined values of date and hour formatted as YYYYMMDDHH.
@@ -56,19 +106,57 @@ const (
 	DimensionDateHourMinute = "dateHourMinute"
 	// DimensionDay : The day of the month, a two-digit number from 01 to 31.
 	DimensionDay = "day"
-	// DimensionDayOfWeek : The day of the week. It returns values in the range [0,6] with Sunday as the first day of the week.
+	// DimensionDayOfWeek : The integer day of the week. It returns values in the range 0 to 6 with Sunday as the first day of the week.
 	DimensionDayOfWeek = "dayOfWeek"
-	// DimensionDefaultChannelGroup : The conversion's default channel group is based primarily on source and medium. An enumeration which includes 'Direct', 'Organic Search', 'Paid Social', 'Organic Social', 'Email', 'Affiliates', 'Referral', 'Paid Search', 'Video', and 'Display'.
+	// DimensionDayOfWeekName : The day of the week in English. This dimension has values such as Sunday or Monday.
+	DimensionDayOfWeekName = "dayOfWeekName"
+	// DimensionDefaultChannelGroup : The key event's default channel group is based primarily on source and medium. An enumeration which includes `Direct`, `Organic Search`, `Paid Social`, `Organic Social`, `Email`, `Affiliates`, `Referral`, `Paid Search`, `Video`, and `Display`.
 	DimensionDefaultChannelGroup = "defaultChannelGroup"
 	// DimensionDeviceCategory : The type of device: Desktop, Tablet, or Mobile.
 	DimensionDeviceCategory = "deviceCategory"
 	// DimensionDeviceModel : The mobile device model (example: iPhone 10,6).
 	DimensionDeviceModel = "deviceModel"
+	// DimensionDv360AdvertiserID : The DV360 Advertiser ID that led to the key event. Identifies the DV360 advertiser.
+	DimensionDv360AdvertiserID = "dv360AdvertiserId"
+	// DimensionDv360AdvertiserName : The DV360 Advertiser Name that led to the key event. DV360 advertisers represent real-life businesses that run advertising campaigns.
+	DimensionDv360AdvertiserName = "dv360AdvertiserName"
+	// DimensionDv360CampaignID : The DV360 Campaign ID that led to the key event. Identifies the DV360 campaign.
+	DimensionDv360CampaignID = "dv360CampaignId"
+	// DimensionDv360CampaignName : The DV360 Campaign Name that led to the key event. DV360 campaigns group together related insertion orders with a common business goal.
+	DimensionDv360CampaignName = "dv360CampaignName"
+	// DimensionDv360CreativeFormat : The DV360 Creative Format that led to the key event. Also referred to as the creative type. For example, expandable, video, or native.
+	DimensionDv360CreativeFormat = "dv360CreativeFormat"
+	// DimensionDv360CreativeID : The DV360 Creative ID that led to the key event. Identifies the DV360 creative.
+	DimensionDv360CreativeID = "dv360CreativeId"
+	// DimensionDv360CreativeName : The DV360 Creative Name that led to the key event. The name given to a DV360 creative.
+	DimensionDv360CreativeName = "dv360CreativeName"
+	// DimensionDv360ExchangeID : The DV360 Exchange ID that led to the key event. Identifies the DV360 exchange.
+	DimensionDv360ExchangeID = "dv360ExchangeId"
+	// DimensionDv360ExchangeName : The DV360 Exchange Name that led to the key event. The DV360 ad exchange involved in the ad click. To learn more, see [managing exchanges](https://support.google.com/displayvideo/answer/9230278).
+	DimensionDv360ExchangeName = "dv360ExchangeName"
+	// DimensionDv360InsertionOrderID : The DV360 Insertion Order ID that led to the key event. Identifies the DV360 insertion order.
+	DimensionDv360InsertionOrderID = "dv360InsertionOrderId"
+	// DimensionDv360InsertionOrderName : The DV360 Insertion Order Name that led to the key event. A DV360 insertion order contains a set of line items that are related to the same advertising campaign.
+	DimensionDv360InsertionOrderName = "dv360InsertionOrderName"
+	// DimensionDv360LineItemID : The DV360 Line Item ID that led to the key event. Identifies the DV360 line item.
+	DimensionDv360LineItemID = "dv360LineItemId"
+	// DimensionDv360LineItemName : The DV360 Line Item Name that led to the key event. A DV360 line item bids on impressions and serves creatives to inventory sources.
+	DimensionDv360LineItemName = "dv360LineItemName"
+	// DimensionDv360Medium : The DV360 Medium that led to the key event. The billable outcome of the insertion order. For example, `cpm`.
+	DimensionDv360Medium = "dv360Medium"
+	// DimensionDv360PartnerID : The DV360 Partner ID that led to the key event. Identifies the DV360 partner.
+	DimensionDv360PartnerID = "dv360PartnerId"
+	// DimensionDv360PartnerName : The DV360 Partner Name that led to the key event. DV360 partners represent agencies, trading desks, or large individual advertisers.
+	DimensionDv360PartnerName = "dv360PartnerName"
+	// DimensionDv360Source : The DV360 Source that led to the key event. The DV360 site name where your ad was displayed.
+	DimensionDv360Source = "dv360Source"
+	// DimensionDv360SourceMedium : The DV360 Source Medium that led to the key event. A combination of the source and medium.
+	DimensionDv360SourceMedium = "dv360SourceMedium"
 	// DimensionEventName : The name of the event.
 	DimensionEventName = "eventName"
-	// DimensionFileExtension : The extension of the downloaded file (for example, 'pdf' or 'txt'). Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'file_extension'.
+	// DimensionFileExtension : The extension of the downloaded file (for example, `pdf` or `txt`). Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `file_extension`.
 	DimensionFileExtension = "fileExtension"
-	// DimensionFileName : The page path of the downloaded file (for example, '/menus/dinner-menu.pdf'). Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'file_name'.
+	// DimensionFileName : The page path of the downloaded file (for example, `/menus/dinner-menu.pdf`). Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `file_name`.
 	DimensionFileName = "fileName"
 	// DimensionFirstSessionDate : The date the user's first session occurred, formatted as YYYYMMDD.
 	DimensionFirstSessionDate = "firstSessionDate"
@@ -76,75 +164,207 @@ const (
 	DimensionFirstUserCampaignID = "firstUserCampaignId"
 	// DimensionFirstUserCampaignName : Name of the marketing campaign that first acquired the user. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
 	DimensionFirstUserCampaignName = "firstUserCampaignName"
-	// DimensionFirstUserDefaultChannelGroup : The default channel group that first acquired the user. Default channel group is based primarily on source and medium. An enumeration which includes 'Direct', 'Organic Search', 'Paid Social', 'Organic Social', 'Email', 'Affiliates', 'Referral', 'Paid Search', 'Video', and 'Display'.
+	// DimensionFirstUserCm360AccountID : The CM360 Account ID that originally acquired the user. Identifies the CM360 account.
+	DimensionFirstUserCm360AccountID = "firstUserCm360AccountId"
+	// DimensionFirstUserCm360AccountName : The CM360 Account Name that originally acquired the user. A CM360 account consists of advertisers, sites, campaigns, and user profiles.
+	DimensionFirstUserCm360AccountName = "firstUserCm360AccountName"
+	// DimensionFirstUserCm360AdvertiserID : The CM360 Advertiser ID that originally acquired the user. Identifies the CM360 advertiser.
+	DimensionFirstUserCm360AdvertiserID = "firstUserCm360AdvertiserId"
+	// DimensionFirstUserCm360AdvertiserName : The CM360 Advertiser Name that originally acquired the user. A CM360 Advertiser contains a group of campaigns, creative assets, and other settings.
+	DimensionFirstUserCm360AdvertiserName = "firstUserCm360AdvertiserName"
+	// DimensionFirstUserCm360CampaignID : The CM360 Campaign ID that originally acquired the user. Identifies the CM360 campaign.
+	DimensionFirstUserCm360CampaignID = "firstUserCm360CampaignId"
+	// DimensionFirstUserCm360CampaignName : The CM360 Campaign Name that originally acquired the user. A CM360 campaign can be configured to specify when your ads run, what landing pages are used, and other properties.
+	DimensionFirstUserCm360CampaignName = "firstUserCm360CampaignName"
+	// DimensionFirstUserCm360CreativeFormat : The CM360 Creative Format that originally acquired the user. CM360 creative formats are also referred to as creative types.
+	DimensionFirstUserCm360CreativeFormat = "firstUserCm360CreativeFormat"
+	// DimensionFirstUserCm360CreativeID : The CM360 Creative ID that originally acquired the user. Identifies a CM360 creative.
+	DimensionFirstUserCm360CreativeID = "firstUserCm360CreativeId"
+	// DimensionFirstUserCm360CreativeName : The CM360 Creative Name that originally acquired the user. The name given to a CM360 creative.
+	DimensionFirstUserCm360CreativeName = "firstUserCm360CreativeName"
+	// DimensionFirstUserCm360CreativeType : The CM360 Creative Type that originally acquired the user. A category of CM360 creatives like 'Display' or 'Tracking'. To learn more, see [manage creatives](https://support.google.com/campaignmanager/answer/3068258)
+	DimensionFirstUserCm360CreativeType = "firstUserCm360CreativeType"
+	// DimensionFirstUserCm360CreativeTypeID : The CM360 Creative Type ID that originally acquired the user. Identifies a CM360 creative type.
+	DimensionFirstUserCm360CreativeTypeID = "firstUserCm360CreativeTypeId"
+	// DimensionFirstUserCm360CreativeVersion : The CM360 Creative Version that originally acquired the user. The version number helps you keep track of multiple versions of your creative in your reports. If you upload a new asset to an existing creative, the version number is increased by one.
+	DimensionFirstUserCm360CreativeVersion = "firstUserCm360CreativeVersion"
+	// DimensionFirstUserCm360Medium : The CM360 Medium that originally acquired the user. The CM360 medium is also referred to as the placement cost structure.
+	DimensionFirstUserCm360Medium = "firstUserCm360Medium"
+	// DimensionFirstUserCm360PlacementCostStructure : The CM360 Placement Cost Structure that originally acquired the user. Placement cost structures regulate how media cost will be calculated. For example 'CPM'.
+	DimensionFirstUserCm360PlacementCostStructure = "firstUserCm360PlacementCostStructure"
+	// DimensionFirstUserCm360PlacementID : The CM360 Placement ID that originally acquired the user. Identifies a CM360 placement. A placement is the part of a website where your ad appears.
+	DimensionFirstUserCm360PlacementID = "firstUserCm360PlacementId"
+	// DimensionFirstUserCm360PlacementName : The CM360 Placement Name that originally acquired the user. The given name for a CM360 placement. A placement is the part of a website where your ad appears.
+	DimensionFirstUserCm360PlacementName = "firstUserCm360PlacementName"
+	// DimensionFirstUserCm360RenderingID : The CM360 Rendering ID that originally acquired the user. Identifies a CM360 creative.
+	DimensionFirstUserCm360RenderingID = "firstUserCm360RenderingId"
+	// DimensionFirstUserCm360SiteID : The CM360 Site ID that originally acquired the user. Identifies a CM360 site.
+	DimensionFirstUserCm360SiteID = "firstUserCm360SiteId"
+	// DimensionFirstUserCm360SiteName : The CM360 Site Name that originally acquired the user. The CM360 Site name from which the ad space was purchased.
+	DimensionFirstUserCm360SiteName = "firstUserCm360SiteName"
+	// DimensionFirstUserCm360Source : The CM360 Source that originally acquired the user. The CM360 source is also referred to as the site name.
+	DimensionFirstUserCm360Source = "firstUserCm360Source"
+	// DimensionFirstUserCm360SourceMedium : The CM360 Source Medium that originally acquired the user. A combination of the source and medium.
+	DimensionFirstUserCm360SourceMedium = "firstUserCm360SourceMedium"
+	// DimensionFirstUserDefaultChannelGroup : The default channel group that first acquired the user. Default channel group is based primarily on source and medium. An enumeration which includes `Direct`, `Organic Search`, `Paid Social`, `Organic Social`, `Email`, `Affiliates`, `Referral`, `Paid Search`, `Video`, and `Display`.
 	DimensionFirstUserDefaultChannelGroup = "firstUserDefaultChannelGroup"
+	// DimensionFirstUserDv360AdvertiserID : The DV360 Advertiser ID that originally acquired the user. Identifies the DV360 advertiser.
+	DimensionFirstUserDv360AdvertiserID = "firstUserDv360AdvertiserId"
+	// DimensionFirstUserDv360AdvertiserName : The DV360 Advertiser Name that originally acquired the user. DV360 advertisers represent real-life businesses that run advertising campaigns.
+	DimensionFirstUserDv360AdvertiserName = "firstUserDv360AdvertiserName"
+	// DimensionFirstUserDv360CampaignID : The DV360 Campaign ID that originally acquired the user. Identifies the DV360 campaign.
+	DimensionFirstUserDv360CampaignID = "firstUserDv360CampaignId"
+	// DimensionFirstUserDv360CampaignName : The DV360 Campaign Name that originally acquired the user. DV360 campaigns group together related insertion orders with a common business goal.
+	DimensionFirstUserDv360CampaignName = "firstUserDv360CampaignName"
+	// DimensionFirstUserDv360CreativeFormat : The DV360 Creative Format that originally acquired the user. Also referred to as the creative type. For example, expandable, video, or native.
+	DimensionFirstUserDv360CreativeFormat = "firstUserDv360CreativeFormat"
+	// DimensionFirstUserDv360CreativeID : The DV360 Creative ID that originally acquired the user. Identifies the DV360 creative.
+	DimensionFirstUserDv360CreativeID = "firstUserDv360CreativeId"
+	// DimensionFirstUserDv360CreativeName : The DV360 Creative Name that originally acquired the user. The name given to a DV360 creative.
+	DimensionFirstUserDv360CreativeName = "firstUserDv360CreativeName"
+	// DimensionFirstUserDv360ExchangeID : The DV360 Exchange ID that originally acquired the user. Identifies the DV360 exchange.
+	DimensionFirstUserDv360ExchangeID = "firstUserDv360ExchangeId"
+	// DimensionFirstUserDv360ExchangeName : The DV360 Exchange Name that originally acquired the user. The DV360 ad exchange involved in the ad click. To learn more, see [managing exchanges](https://support.google.com/displayvideo/answer/9230278).
+	DimensionFirstUserDv360ExchangeName = "firstUserDv360ExchangeName"
+	// DimensionFirstUserDv360InsertionOrderID : The DV360 Insertion Order ID that originally acquired the user. Identifies the DV360 insertion order.
+	DimensionFirstUserDv360InsertionOrderID = "firstUserDv360InsertionOrderId"
+	// DimensionFirstUserDv360InsertionOrderName : The DV360 Insertion Order Name that originally acquired the user. A DV360 insertion order contains a set of line items that are related to the same advertising campaign.
+	DimensionFirstUserDv360InsertionOrderName = "firstUserDv360InsertionOrderName"
+	// DimensionFirstUserDv360LineItemID : The DV360 Line Item ID that originally acquired the user. Identifies the DV360 line item.
+	DimensionFirstUserDv360LineItemID = "firstUserDv360LineItemId"
+	// DimensionFirstUserDv360LineItemName : The DV360 Line Item Name that originally acquired the user. A DV360 line item bids on impressions and serves creatives to inventory sources.
+	DimensionFirstUserDv360LineItemName = "firstUserDv360LineItemName"
+	// DimensionFirstUserDv360Medium : The DV360 Medium that originally acquired the user. The billable outcome of the insertion order. For example, `cpm`.
+	DimensionFirstUserDv360Medium = "firstUserDv360Medium"
+	// DimensionFirstUserDv360PartnerID : The DV360 Partner ID that originally acquired the user. Identifies the DV360 partner.
+	DimensionFirstUserDv360PartnerID = "firstUserDv360PartnerId"
+	// DimensionFirstUserDv360PartnerName : The DV360 Partner Name that originally acquired the user. DV360 partners represent agencies, trading desks, or large individual advertisers.
+	DimensionFirstUserDv360PartnerName = "firstUserDv360PartnerName"
+	// DimensionFirstUserDv360Source : The DV360 Source that originally acquired the user. The DV360 site name where your ad was displayed.
+	DimensionFirstUserDv360Source = "firstUserDv360Source"
+	// DimensionFirstUserDv360SourceMedium : The DV360 Source Medium that originally acquired the user. A combination of the source and medium.
+	DimensionFirstUserDv360SourceMedium = "firstUserDv360SourceMedium"
 	// DimensionFirstUserGoogleAdsAccountName : The Account name from Google Ads that first acquired the user.
 	DimensionFirstUserGoogleAdsAccountName = "firstUserGoogleAdsAccountName"
 	// DimensionFirstUserGoogleAdsAdGroupID : The Ad Group Id in Google Ads that first acquired the user.
 	DimensionFirstUserGoogleAdsAdGroupID = "firstUserGoogleAdsAdGroupId"
 	// DimensionFirstUserGoogleAdsAdGroupName : The Ad Group Name in Google Ads that first acquired the user.
 	DimensionFirstUserGoogleAdsAdGroupName = "firstUserGoogleAdsAdGroupName"
-	// DimensionFirstUserGoogleAdsAdNetworkType : The advertising network that first acquired the user. An enumeration which includes 'Google search', 'Search partners', 'Google Display Network', 'Youtube Search', 'Youtube Videos', 'Cross-network', 'Social', and '(universal campaign)'.
+	// DimensionFirstUserGoogleAdsAdNetworkType : The advertising network that first acquired the user. An enumeration which includes `Google search`, `Search partners`, `Google Display Network`, `Youtube Search`, `Youtube Videos`, `Cross-network`, `Social`, and `(universal campaign)`.
 	DimensionFirstUserGoogleAdsAdNetworkType = "firstUserGoogleAdsAdNetworkType"
 	// DimensionFirstUserGoogleAdsCampaignID : Identifier of the Google Ads marketing campaign that first acquired the user.
 	DimensionFirstUserGoogleAdsCampaignID = "firstUserGoogleAdsCampaignId"
 	// DimensionFirstUserGoogleAdsCampaignName : Name of the Google Ads marketing campaign that first acquired the user.
 	DimensionFirstUserGoogleAdsCampaignName = "firstUserGoogleAdsCampaignName"
-	// DimensionFirstUserGoogleAdsCampaignType : The campaign type of the Google Ads campaign that first acquired the user. Campaign types determine where customers see your ads and the settings and options available to you in Google Ads. Campaign type is an enumeration that includes: Search, Display, Shopping, Video, Discovery, App, Smart, Hotel, Local, and Performance Max. To learn more, see <https://support.google.com/google-ads/answer/2567043>.
+	// DimensionFirstUserGoogleAdsCampaignType : The campaign type of the Google Ads campaign that first acquired the user. Campaign types determine where customers see your ads and the settings and options available to you in Google Ads. Campaign type is an enumeration that includes: Search, Display, Shopping, Video, Demand Gen, App, Smart, Hotel, Local, and Performance Max. To learn more, see [Choose the right campaign type](https://support.google.com/google-ads/answer/2567043).
 	DimensionFirstUserGoogleAdsCampaignType = "firstUserGoogleAdsCampaignType"
 	// DimensionFirstUserGoogleAdsCreativeID : The ID of the Google Ads creative that first acquired the user. Creative IDs identify individual ads.
 	DimensionFirstUserGoogleAdsCreativeID = "firstUserGoogleAdsCreativeId"
 	// DimensionFirstUserGoogleAdsCustomerID : The Customer ID from Google Ads that first acquired the user. Customer IDs in Google Ads uniquely identify Google Ads accounts.
 	DimensionFirstUserGoogleAdsCustomerID = "firstUserGoogleAdsCustomerId"
-	// DimensionFirstUserGoogleAdsKeyword : The matched keyword that first acquired the user. Keywords are words or phrases describing your product or service that you choose to get your ad in front of the right customers. To learn more about Keywords, see <https://support.google.com/google-ads/answer/6323>.
+	// DimensionFirstUserGoogleAdsKeyword : First user Google Ads keyword text | The matched keyword that first acquired the user. Keywords are words or phrases describing your product or service that you choose to get your ad in front of the right customers. To learn more about Keywords, see [Keywords: Definition](https://support.google.com/google-ads/answer/6323).
 	DimensionFirstUserGoogleAdsKeyword = "firstUserGoogleAdsKeyword"
 	// DimensionFirstUserGoogleAdsQuery : The search query that first acquired the user.
 	DimensionFirstUserGoogleAdsQuery = "firstUserGoogleAdsQuery"
 	// DimensionFirstUserManualAdContent : The ad content that first acquired the user. Populated by the utm_content parameter.
 	DimensionFirstUserManualAdContent = "firstUserManualAdContent"
+	// DimensionFirstUserManualCampaignID : The manual Campaign ID that originally acquired the user. Identifies the manual campaign. Populated by `utm_id` URL parameter.
+	DimensionFirstUserManualCampaignID = "firstUserManualCampaignId"
+	// DimensionFirstUserManualCampaignName : The manual Campaign Name that originally acquired the user. The name of the manual campaign. Populated by `utm_campaign` URL parameter. To learn more, see [Collect campaign data with custom URLs](https://support.google.com/analytics/answer/10917952).
+	DimensionFirstUserManualCampaignName = "firstUserManualCampaignName"
+	// DimensionFirstUserManualCreativeFormat : The manual Creative Format that originally acquired the user. Identifies the creative format used in the ad. Populated by `utm_creative_format` URL parameter.
+	DimensionFirstUserManualCreativeFormat = "firstUserManualCreativeFormat"
+	// DimensionFirstUserManualMarketingTactic : The manual Marketing Tactic that originally acquired the user. The targeting criteria applied to a campaign. For example, remarketing or prospecting. Populated by `utm_marketing_tactic` URL parameter.
+	DimensionFirstUserManualMarketingTactic = "firstUserManualMarketingTactic"
+	// DimensionFirstUserManualMedium : The manual Medium that originally acquired the user. The marketing medium used in the referral. For example, `cpc`. Populated by `utm_medium` URL parameter.
+	DimensionFirstUserManualMedium = "firstUserManualMedium"
+	// DimensionFirstUserManualSource : The manual Source that originally acquired the user. The referrer. Populated by `utm_source` URL parameter.
+	DimensionFirstUserManualSource = "firstUserManualSource"
+	// DimensionFirstUserManualSourceMedium : The manual Source Medium that originally acquired the user. A combination of the source and medium.
+	DimensionFirstUserManualSourceMedium = "firstUserManualSourceMedium"
+	// DimensionFirstUserManualSourcePlatform : The manual Source Platform that originally acquired the user. The platform responsible for directing traffic to a given Analytics property. Populated by `utm_source_platform` URL parameter.
+	DimensionFirstUserManualSourcePlatform = "firstUserManualSourcePlatform"
 	// DimensionFirstUserManualTerm : The term that first acquired the user. Populated by the utm_term parameter.
 	DimensionFirstUserManualTerm = "firstUserManualTerm"
 	// DimensionFirstUserMedium : The medium that first acquired the user to your website or app.
 	DimensionFirstUserMedium = "firstUserMedium"
+	// DimensionFirstUserPrimaryChannelGroup : The primary channel group that originally acquired a user. Primary channel groups are the channel groups used in standard reports in Google Analytics and serve as an active record of your property's data in alignment with channel grouping over time. To learn more, see [Custom channel groups](https://support.google.com/analytics/answer/13051316).
+	DimensionFirstUserPrimaryChannelGroup = "firstUserPrimaryChannelGroup"
+	// DimensionFirstUserSa360AdGroupID : The SA360 Ad Group ID that originally acquired the user. Identifies the SA360 ad group.
+	DimensionFirstUserSa360AdGroupID = "firstUserSa360AdGroupId"
+	// DimensionFirstUserSa360AdGroupName : The SA360 Ad Group Name that originally acquired the user. SA360 Ad groups contain ads and keywords that relate to each other.
+	DimensionFirstUserSa360AdGroupName = "firstUserSa360AdGroupName"
+	// DimensionFirstUserSa360CampaignID : The SA360 Campaign ID that originally acquired the user. Identifies the SA360 campaign.
+	DimensionFirstUserSa360CampaignID = "firstUserSa360CampaignId"
+	// DimensionFirstUserSa360CampaignName : The SA360 Campaign Name that originally acquired the user. A SA360 campaign lets you organize your ads and define a goal for your advertising.
+	DimensionFirstUserSa360CampaignName = "firstUserSa360CampaignName"
+	// DimensionFirstUserSa360CreativeFormat : The SA360 Creative Format that originally acquired the user. The creative format is the specific layout or design of the advertisement used in a campaign.
+	DimensionFirstUserSa360CreativeFormat = "firstUserSa360CreativeFormat"
+	// DimensionFirstUserSa360EngineAccountID : The SA360 Engine Account ID that originally acquired the user. Identifies the SA360 engine account.
+	DimensionFirstUserSa360EngineAccountID = "firstUserSa360EngineAccountId"
+	// DimensionFirstUserSa360EngineAccountName : The SA360 Engine Account Name that originally acquired the user. A SA360 engine account contains campaigns, ad groups, and other items from an advertising account. To learn more, see [SA360 engine account](https://support.google.com/searchads/answer/4497746).
+	DimensionFirstUserSa360EngineAccountName = "firstUserSa360EngineAccountName"
+	// DimensionFirstUserSa360EngineAccountType : The SA360 Engine Account Type that originally acquired the user. The type of engine used by the search engine account.
+	DimensionFirstUserSa360EngineAccountType = "firstUserSa360EngineAccountType"
+	// DimensionFirstUserSa360KeywordText : The SA360 Keyword Text that originally acquired the user. The keywords that matched the search query.
+	DimensionFirstUserSa360KeywordText = "firstUserSa360KeywordText"
+	// DimensionFirstUserSa360ManagerAccountID : The SA360 Manager Account ID that originally acquired the user. Identifies the SA360 manager account.
+	DimensionFirstUserSa360ManagerAccountID = "firstUserSa360ManagerAccountId"
+	// DimensionFirstUserSa360ManagerAccountName : The SA360 Manager Account Name that originally acquired the user. The top level of the Search Ads 360 account hierarchy and is used for administration and reporting across the lower-level sub-manager and client accounts.
+	DimensionFirstUserSa360ManagerAccountName = "firstUserSa360ManagerAccountName"
+	// DimensionFirstUserSa360Medium : The SA360 Medium that originally acquired the user. The payment mode used in ad buying. For example, `cpc`.
+	DimensionFirstUserSa360Medium = "firstUserSa360Medium"
+	// DimensionFirstUserSa360Query : The SA360 Query that originally acquired the user. The search query typed by the user.
+	DimensionFirstUserSa360Query = "firstUserSa360Query"
+	// DimensionFirstUserSa360Source : The SA360 Source that originally acquired the user. The search query happened on this site.
+	DimensionFirstUserSa360Source = "firstUserSa360Source"
+	// DimensionFirstUserSa360SourceMedium : The SA360 Source Medium that originally acquired the user. A combination of the source and medium.
+	DimensionFirstUserSa360SourceMedium = "firstUserSa360SourceMedium"
 	// DimensionFirstUserSource : The source that first acquired the user to your website or app.
 	DimensionFirstUserSource = "firstUserSource"
-	// DimensionFirstUserSourceMedium : The combined values of the dimensions 'firstUserSource' and 'firstUserMedium'.
+	// DimensionFirstUserSourceMedium : The combined values of the dimensions `firstUserSource` and `firstUserMedium`.
 	DimensionFirstUserSourceMedium = "firstUserSourceMedium"
-	// DimensionFirstUserSourcePlatform : The source platform that first acquired the user. Please do not depend on this field returning 'Manual' for traffic that uses UTMs; this field will update from returning 'Manual' to returning '(not set)' for an upcoming feature launch.
+	// DimensionFirstUserSourcePlatform : The source platform that first acquired the user. Don't depend on this field returning `Manual` for traffic that uses UTMs; this field will update from returning `Manual` to returning `(not set)` for an upcoming feature launch.
 	DimensionFirstUserSourcePlatform = "firstUserSourcePlatform"
-	// DimensionFullPageUrl : The hostname, page path, and query string for web pages visited; for example, the fullPageUrl portion of https://www.example.com/store/contact-us?query_string=true is www.example.com/store/contact-us?query_string=true.
+	// DimensionFullPageUrl : The hostname, page path, and query string for web pages visited; for example, the `fullPageUrl` portion of `https://www.example.com/store/contact-us?query_string=true` is `www.example.com/store/contact-us?query_string=true`.
 	DimensionFullPageUrl = "fullPageUrl"
-	// DimensionGoogleAdsAccountName : The Account name from Google Ads for the campaign that led to the conversion event. Corresponds to customer.descriptive_name in the Google Ads API.
+	// DimensionGoogleAdsAccountName : The Account name from Google Ads for the campaign that led to the key event. Corresponds to `customer.descriptive_name` in the Google Ads API.
 	DimensionGoogleAdsAccountName = "googleAdsAccountName"
-	// DimensionGoogleAdsAdGroupID : The ad group id attributed to the conversion event.
+	// DimensionGoogleAdsAdGroupID : The Google Ads ad group ID attributed to the key event.
 	DimensionGoogleAdsAdGroupID = "googleAdsAdGroupId"
-	// DimensionGoogleAdsAdGroupName : The ad group name attributed to the conversion event.
+	// DimensionGoogleAdsAdGroupName : The ad group name attributed to the key event.
 	DimensionGoogleAdsAdGroupName = "googleAdsAdGroupName"
-	// DimensionGoogleAdsAdNetworkType : The advertising network type of the conversion. An enumeration which includes 'Google search', 'Search partners', 'Google Display Network', 'Youtube Search', 'Youtube Videos', 'Cross-network', 'Social', and '(universal campaign)'.
+	// DimensionGoogleAdsAdNetworkType : The advertising network type of the key event. An enumeration which includes `Google search`, `Search partners`, `Google Display Network`, `Youtube Search`, `Youtube Videos`, `Cross-network`, `Social`, and `(universal campaign)`.
 	DimensionGoogleAdsAdNetworkType = "googleAdsAdNetworkType"
-	// DimensionGoogleAdsCampaignID : The campaign ID for the Google Ads campaign attributed to the conversion event.
+	// DimensionGoogleAdsCampaignID : The campaign ID for the Google Ads campaign attributed to the key event.
 	DimensionGoogleAdsCampaignID = "googleAdsCampaignId"
-	// DimensionGoogleAdsCampaignName : The campaign name for the Google Ads campaign attributed to the conversion event.
+	// DimensionGoogleAdsCampaignName : The campaign name for the Google Ads campaign attributed to the key event.
 	DimensionGoogleAdsCampaignName = "googleAdsCampaignName"
-	// DimensionGoogleAdsCampaignType : The campaign type for the Google Ads campaign attributed to the conversion event. Campaign types determine where customers see your ads and the settings and options available to you in Google Ads. Campaign type is an enumeration that includes: Search, Display, Shopping, Video, Discovery, App, Smart, Hotel, Local, and Performance Max. To learn more, see <https://support.google.com/google-ads/answer/2567043>.
+	// DimensionGoogleAdsCampaignType : The campaign type for the Google Ads campaign attributed to the key event. Campaign types determine where customers see your ads and the settings and options available to you in Google Ads. Campaign type is an enumeration that includes: Search, Display, Shopping, Video, Demand Gen, App, Smart, Hotel, Local, and Performance Max. To learn more, see [Choose the right campaign type](https://support.google.com/google-ads/answer/2567043).
 	DimensionGoogleAdsCampaignType = "googleAdsCampaignType"
-	// DimensionGoogleAdsCreativeID : The ID of the Google Ads creative attributed to the conversion event. Creative IDs identify individual ads.
+	// DimensionGoogleAdsCreativeID : The ID of the Google Ads creative attributed to the key event. Creative IDs identify individual ads.
 	DimensionGoogleAdsCreativeID = "googleAdsCreativeId"
-	// DimensionGoogleAdsCustomerID : The Customer ID from Google Ads for the campaign that led to conversion event. Customer IDs in Google Ads uniquely identify Google Ads accounts.
+	// DimensionGoogleAdsCustomerID : The Customer ID from Google Ads for the campaign that led to key event. Customer IDs in Google Ads uniquely identify Google Ads accounts.
 	DimensionGoogleAdsCustomerID = "googleAdsCustomerId"
-	// DimensionGoogleAdsKeyword : The matched keyword that led to the conversion event. Keywords are words or phrases describing your product or service that you choose to get your ad in front of the right customers. To learn more about Keywords, see <https://support.google.com/google-ads/answer/6323>.
+	// DimensionGoogleAdsKeyword : The matched keyword that led to the key event. Keywords are words or phrases describing your product or service that you choose to get your ad in front of the right customers. To learn more about Keywords, see [Keywords: Definition](https://support.google.com/google-ads/answer/6323).
 	DimensionGoogleAdsKeyword = "googleAdsKeyword"
-	// DimensionGoogleAdsQuery : The search query that led to the conversion event.
+	// DimensionGoogleAdsQuery : The search query that led to the key event.
 	DimensionGoogleAdsQuery = "googleAdsQuery"
-	// DimensionGroupID : The player group ID in a game for an event. Populated by the event parameter 'group_id'.
+	// DimensionGroupID : The player group ID in a game for an event. Populated by the event parameter `group_id`.
 	DimensionGroupID = "groupId"
 	// DimensionHostName : Includes the subdomain and domain names of a URL; for example, the Host Name of www.example.com/contact.html is www.example.com.
 	DimensionHostName = "hostName"
 	// DimensionHour : The two-digit hour of the day that the event was logged. This dimension ranges from 0-23 and is reported in your property's timezone.
 	DimensionHour = "hour"
-	// DimensionIsConversionEvent : The string 'true' if the event is a conversion. Events are marked as conversions at collection time; changes to an event's conversion marking apply going forward. You can mark any event as a conversion in Google Analytics, and some events (i.e. first_open, purchase) are marked as conversions by default. To learn more, see <https://support.google.com/analytics/answer/9267568>.
-	DimensionIsConversionEvent = "isConversionEvent"
-	// DimensionItemAffiliation : The name or code of the affiliate (partner/vendor; if any) associated with an individual item. Populated by the 'affiliation' item parameter.
+	// DimensionIsKeyEvent : The string `true` if the event is a key event. Marking an event as a key event affects reports from time of creation. It doesn't change historic data. You can mark any event as key in Google Analytics, and some events (such as `first_open` or `purchase`) are marked as key events by default.
+	DimensionIsKeyEvent = "isKeyEvent"
+	// DimensionIsoWeek : ISO week number, where each week starts on Monday. For details, see http://en.wikipedia.org/wiki/ISO_week_date. Example values include 01, 02, & 53.
+	DimensionIsoWeek = "isoWeek"
+	// DimensionIsoYear : The ISO year of the event. For details, see http://en.wikipedia.org/wiki/ISO_week_date. Example values include 2022 & 2023.
+	DimensionIsoYear = "isoYear"
+	// DimensionIsoYearIsoWeek : The combined values of isoWeek and isoYear. Example values include 201652 & 201701.
+	DimensionIsoYearIsoWeek = "isoYearIsoWeek"
+	// DimensionItemAffiliation : The name or code of the affiliate (partner/vendor; if any) associated with an individual item. Populated by the `affiliation` item parameter.
 	DimensionItemAffiliation = "itemAffiliation"
 	// DimensionItemBrand : Brand name of the item.
 	DimensionItemBrand = "itemBrand"
@@ -164,41 +384,65 @@ const (
 	DimensionItemListID = "itemListId"
 	// DimensionItemListName : The name of the item list.
 	DimensionItemListName = "itemListName"
+	// DimensionItemListPosition : The position of an item in a list. For example, a product you sell in a list. This dimension is populated in tagging by the `index` parameter in the items array.
+	DimensionItemListPosition = "itemListPosition"
+	// DimensionItemLocationID : The physical location associated with the item. For example, the physical store location. It's recommended to use the [Google Place ID](https://developers.google.com/maps/documentation/places/web-service/place-id) that corresponds to the associated item. A custom location ID can also be used. This field is populated in tagging by the `location_id` parameter in the items array.
+	DimensionItemLocationID = "itemLocationID"
 	// DimensionItemName : The name of the item.
 	DimensionItemName = "itemName"
 	// DimensionItemPromotionCreativeName : The name of the item-promotion creative.
 	DimensionItemPromotionCreativeName = "itemPromotionCreativeName"
+	// DimensionItemPromotionCreativeSlot : The name of the promotional creative slot associated with the item. This dimension can be specified in tagging by the `creative_slot` parameter at the event or item level. If the parameter is specified at both the event & item level, the item-level parameter is used.
+	DimensionItemPromotionCreativeSlot = "itemPromotionCreativeSlot"
 	// DimensionItemPromotionID : The ID of the item promotion.
 	DimensionItemPromotionID = "itemPromotionId"
 	// DimensionItemPromotionName : The name of the promotion for the item.
 	DimensionItemPromotionName = "itemPromotionName"
-	// DimensionItemVariant : The specific variation of a product. e.g., XS, S, M, L for size; or Red, Blue, Green, Black for color. Populated by the 'item_variant' parameter.
+	// DimensionItemVariant : The specific variation of a product. For example, XS, S, M, or L for size; or Red, Blue, Green, or Black for color. Populated by the `item_variant` parameter.
 	DimensionItemVariant = "itemVariant"
-	// DimensionLandingPage : The page path + query string associated with the first pageview in a session.
+	// DimensionLandingPage : The page path associated with the first pageview in a session.
 	DimensionLandingPage = "landingPage"
-	// DimensionLanguage : The language setting of the user's browser or device. e.g. English
+	// DimensionLandingPagePlusQueryString : The page path + query string associated with the first pageview in a session.
+	DimensionLandingPagePlusQueryString = "landingPagePlusQueryString"
+	// DimensionLanguage : The language setting of the user's browser or device. For example, `English`.
 	DimensionLanguage = "language"
-	// DimensionLanguageCode : The language setting (ISO 639) of the user's browser or device. e.g. 'en-us'
+	// DimensionLanguageCode : The language setting (ISO 639) of the user's browser or device. For example, `en-us`.
 	DimensionLanguageCode = "languageCode"
-	// DimensionLevel : The player's level in a game. Populated by the event parameter 'level'.
+	// DimensionLevel : The player's level in a game. Populated by the event parameter `level`.
 	DimensionLevel = "level"
-	// DimensionLinkClasses : The HTML class attribute for an outbound link. For example if a user clicks a link '<a class="center" href="www.youtube.com">', this dimension will return 'center'. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'link_classes'.
+	// DimensionLinkClasses : The HTML class attribute for an outbound link. For example if a user clicks a link `<a class="center" href="www.youtube.com">`, this dimension will return `center`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_classes`.
 	DimensionLinkClasses = "linkClasses"
-	// DimensionLinkDomain : The destination domain of the outbound link. For example if a user clicks a link '<a href="www.youtube.com">', this dimension will return 'youtube.com'. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'link_domain'.
+	// DimensionLinkDomain : The destination domain of the outbound link. For example if a user clicks a link `<a href="www.youtube.com">`, this dimension will return `youtube.com`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_domain`.
 	DimensionLinkDomain = "linkDomain"
-	// DimensionLinkID : The HTML id attribute for an outbound link or file download. For example if a user clicks a link '<a id="socialLinks" href="www.youtube.com">', this dimension will return 'socialLinks'. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'link_id'.
+	// DimensionLinkID : The HTML ID attribute for an outbound link or file download. For example if a user clicks a link `<a id="socialLinks" href="www.youtube.com">`, this dimension will return `socialLinks`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_id`.
 	DimensionLinkID = "linkId"
-	// DimensionLinkText : The link text of the file download. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'link_text'.
+	// DimensionLinkText : The link text of the file download. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_text`.
 	DimensionLinkText = "linkText"
-	// DimensionLinkUrl : The full url for an outbound link or file download. For example if a user clicks a link '<a href="https://www.youtube.com/results?search_query=analytics">', this dimension will return 'https://www.youtube.com/results?search_query=analytics'. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'link_url'.
+	// DimensionLinkUrl : The full URL for an outbound link or file download. For example if a user clicks a link `<a href="https://www.youtube.com/results?search_query=analytics">`, this dimension will return `https://www.youtube.com/results?search_query=analytics`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `link_url`.
 	DimensionLinkUrl = "linkUrl"
-	// DimensionManualAdContent : The ad content attributed to the conversion event. Populated by the utm_content parameter.
+	// DimensionManualAdContent : The ad content attributed to the key event. Populated by the utm_content parameter.
 	DimensionManualAdContent = "manualAdContent"
-	// DimensionManualTerm : The term attributed to the conversion event. Populated by the utm_term parameter.
+	// DimensionManualCampaignID : The manual Campaign ID that led to the key event. Identifies the manual campaign. Populated by `utm_id` URL parameter.
+	DimensionManualCampaignID = "manualCampaignId"
+	// DimensionManualCampaignName : The manual Campaign Name that led to the key event. The name of the manual campaign. Populated by `utm_campaign` URL parameter. To learn more, see [Collect campaign data with custom URLs](https://support.google.com/analytics/answer/10917952).
+	DimensionManualCampaignName = "manualCampaignName"
+	// DimensionManualCreativeFormat : The manual Creative Format that led to the key event. Identifies the creative format used in the ad. Populated by `utm_creative_format` URL parameter.
+	DimensionManualCreativeFormat = "manualCreativeFormat"
+	// DimensionManualMarketingTactic : The manual Marketing Tactic that led to the key event. The targeting criteria applied to a campaign. For example, remarketing or prospecting. Populated by `utm_marketing_tactic` URL parameter.
+	DimensionManualMarketingTactic = "manualMarketingTactic"
+	// DimensionManualMedium : The manual Medium that led to the key event. The marketing medium used in the referral. For example, `cpc`. Populated by `utm_medium` URL parameter.
+	DimensionManualMedium = "manualMedium"
+	// DimensionManualSource : The manual Source that led to the key event. The referrer. Populated by `utm_source` URL parameter.
+	DimensionManualSource = "manualSource"
+	// DimensionManualSourceMedium : The manual Source Medium that led to the key event. A combination of the source and medium.
+	DimensionManualSourceMedium = "manualSourceMedium"
+	// DimensionManualSourcePlatform : The manual Source Platform that led to the key event. The platform responsible for directing traffic to a given Analytics property. Populated by `utm_source_platform` URL parameter.
+	DimensionManualSourcePlatform = "manualSourcePlatform"
+	// DimensionManualTerm : The term attributed to the key event. Populated by the utm_term parameter.
 	DimensionManualTerm = "manualTerm"
-	// DimensionMedium : The medium attributed to the conversion event.
+	// DimensionMedium : The medium attributed to the key event.
 	DimensionMedium = "medium"
-	// DimensionMethod : The method by which an event was triggered. Populated by the event parameter 'method'.
+	// DimensionMethod : The method by which an event was triggered. Populated by the event parameter `method`.
 	DimensionMethod = "method"
 	// DimensionMinute : The two-digit minute of the hour that the event was logged. This dimension ranges from 0-59 and is reported in your property's timezone.
 	DimensionMinute = "minute"
@@ -210,7 +454,7 @@ const (
 	DimensionMobileDeviceModel = "mobileDeviceModel"
 	// DimensionMonth : The month of the event, a two digit integer from 01 to 12.
 	DimensionMonth = "month"
-	// DimensionNewVsReturning : New users have 0 previous sessions, and returning users have 1 or more previous sessions. This dimension returns two values: 'new' or 'returning'.
+	// DimensionNewVsReturning : New users have 0 previous sessions, and returning users have 1 or more previous sessions. This dimension returns two values: `new` or `returning`.
 	DimensionNewVsReturning = "newVsReturning"
 	// DimensionNthDay : The number of days since the start of the date range.
 	DimensionNthDay = "nthDay"
@@ -232,107 +476,245 @@ const (
 	DimensionOperatingSystemWithVersion = "operatingSystemWithVersion"
 	// DimensionOrderCoupon : Code for the order-level coupon.
 	DimensionOrderCoupon = "orderCoupon"
-	// DimensionOutbound : Returns 'true' if the link lead to a site is not a part of the property’s domain. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'outbound'.
+	// DimensionOutbound : Returns `true` if the link led to a site that is not a part of the property's domain. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `outbound`.
 	DimensionOutbound = "outbound"
-	// DimensionPageLocation : The protocol, hostname, page path, and query string for web pages visited; for example, the pageLocation portion of https://www.example.com/store/contact-us?query_string=true is https://www.example.com/store/contact-us?query_string=true. Populated by the event parameter 'page_location'.
+	// DimensionPageLocation : The protocol, hostname, page path, and query string for web pages visited; for example, the `pageLocation` portion of `https://www.example.com/store/contact-us?query_string=true` is `https://www.example.com/store/contact-us?query_string=true`. Populated by the event parameter `page_location`.
 	DimensionPageLocation = "pageLocation"
-	// DimensionPagePath : The portion of the URL between the hostname and query string for web pages visited; for example, the pagePath portion of https://www.example.com/store/contact-us?query_string=true is /store/contact-us.
+	// DimensionPagePath : The portion of the URL between the hostname and query string for web pages visited; for example, the pagePath portion of `https://www.example.com/store/contact-us?query_string=true` is `/store/contact-us`.
 	DimensionPagePath = "pagePath"
-	// DimensionPagePathPlusQueryString : The portion of the URL following the hostname for web pages visited; for example, the pagePathPlusQueryString portion of https://www.example.com/store/contact-us?query_string=true is /store/contact-us?query_string=true.
+	// DimensionPagePathPlusQueryString : The portion of the URL following the hostname for web pages visited; for example, the `pagePathPlusQueryString` portion of `https://www.example.com/store/contact-us?query_string=true` is `/store/contact-us?query_string=true`.
 	DimensionPagePathPlusQueryString = "pagePathPlusQueryString"
-	// DimensionPageReferrer : The full referring URL including the hostname and path. This referring URL is the user's previous URL and can be this website's domain or other domains. Populated by the event parameter 'page_referrer'.
+	// DimensionPageReferrer : The full referring URL including the hostname and path. This referring URL is the user's previous URL and can be this website's domain or other domains. Populated by the event parameter `page_referrer`.
 	DimensionPageReferrer = "pageReferrer"
 	// DimensionPageTitle : The web page titles used on your site.
 	DimensionPageTitle = "pageTitle"
-	// DimensionPercentScrolled : The percentage down the page that the user has scrolled (for example, '90'). Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'percent_scrolled'.
+	// DimensionPercentScrolled : The percentage down the page that the user has scrolled (for example, `90`). Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `percent_scrolled`.
 	DimensionPercentScrolled = "percentScrolled"
 	// DimensionPlatform : The platform on which your app or website ran; for example, web, iOS, or Android. To determine a stream's type in a report, use both platform and streamId.
 	DimensionPlatform = "platform"
 	// DimensionPlatformDeviceCategory : The platform and type of device on which your website or mobile app ran. (example: Android / mobile)
 	DimensionPlatformDeviceCategory = "platformDeviceCategory"
+	// DimensionPrimaryChannelGroup : The primary channel group attributed to the key event. Primary channel groups are the channel groups used in standard reports in Google Analytics and serve as an active record of your property's data in alignment with channel grouping over time. To learn more, see [Custom channel groups](https://support.google.com/analytics/answer/13051316).
+	DimensionPrimaryChannelGroup = "primaryChannelGroup"
 	// DimensionRegion : The geographic region from which the user activity originated, derived from their IP address.
 	DimensionRegion = "region"
+	// DimensionSa360AdGroupID : The SA360 Ad Group ID that led to the key event. Identifies the SA360 ad group.
+	DimensionSa360AdGroupID = "sa360AdGroupId"
+	// DimensionSa360AdGroupName : The SA360 Ad Group Name that led to the key event. SA360 Ad groups contain ads and keywords that relate to each other.
+	DimensionSa360AdGroupName = "sa360AdGroupName"
+	// DimensionSa360CampaignID : The SA360 Campaign ID that led to the key event. Identifies the SA360 campaign.
+	DimensionSa360CampaignID = "sa360CampaignId"
+	// DimensionSa360CampaignName : The SA360 Campaign Name that led to the key event. A SA360 campaign lets you organize your ads and define a goal for your advertising.
+	DimensionSa360CampaignName = "sa360CampaignName"
+	// DimensionSa360CreativeFormat : The SA360 Creative Format that led to the key event. The creative format is the specific layout or design of the advertisement used in a campaign.
+	DimensionSa360CreativeFormat = "sa360CreativeFormat"
+	// DimensionSa360EngineAccountID : The SA360 Engine Account ID that led to the key event. Identifies the SA360 engine account.
+	DimensionSa360EngineAccountID = "sa360EngineAccountId"
+	// DimensionSa360EngineAccountName : The SA360 Engine Account Name that led to the key event. A SA360 engine account contains campaigns, ad groups, and other items from an advertising account. To learn more, see [SA360 engine account](https://support.google.com/searchads/answer/4497746).
+	DimensionSa360EngineAccountName = "sa360EngineAccountName"
+	// DimensionSa360EngineAccountType : The SA360 Engine Account Type that led to the key event. The type of engine used by the search engine account.
+	DimensionSa360EngineAccountType = "sa360EngineAccountType"
+	// DimensionSa360KeywordText : The SA360 Keyword Text that led to the key event. The keywords that matched the search query.
+	DimensionSa360KeywordText = "sa360KeywordText"
+	// DimensionSa360ManagerAccountID : The SA360 Manager Account ID that led to the key event. Identifies the SA360 manager account.
+	DimensionSa360ManagerAccountID = "sa360ManagerAccountId"
+	// DimensionSa360ManagerAccountName : The SA360 Manager Account Name that led to the key event. The top level of the Search Ads 360 account hierarchy and is used for administration and reporting across the lower-level sub-manager and client accounts.
+	DimensionSa360ManagerAccountName = "sa360ManagerAccountName"
+	// DimensionSa360Medium : The SA360 Medium that led to the key event. The payment mode used in ad buying. For example, `cpc`.
+	DimensionSa360Medium = "sa360Medium"
+	// DimensionSa360Query : The SA360 Query that led to the key event. The search query typed by the user.
+	DimensionSa360Query = "sa360Query"
+	// DimensionSa360Source : The SA360 Source that led to the key event. The search query happened on this site.
+	DimensionSa360Source = "sa360Source"
+	// DimensionSa360SourceMedium : The SA360 Source Medium that led to the key event. A combination of the source and medium.
+	DimensionSa360SourceMedium = "sa360SourceMedium"
 	// DimensionScreenResolution : The screen resolution of the user's monitor. For example, 1920x1080.
 	DimensionScreenResolution = "screenResolution"
-	// DimensionSearchTerm : The term searched by the user. For example if the user visits '/some-page.html?q=some-term', this dimension returns 'some-term'. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter 'search_term'.
+	// DimensionSearchTerm : The term searched by the user. For example if the user visits `/some-page.html?q=some-term`, this dimension returns `some-term`. Automatically populated if Enhanced Measurement is enabled. Populated by the event parameter `search_term`.
 	DimensionSearchTerm = "searchTerm"
-	// DimensionSessionCampaignID : The marketing campaign id for a session. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
+	// DimensionSessionCampaignID : The marketing campaign ID for a session. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
 	DimensionSessionCampaignID = "sessionCampaignId"
 	// DimensionSessionCampaignName : The marketing campaign name for a session. Includes Google Ads Campaigns, Manual Campaigns, & other Campaigns.
 	DimensionSessionCampaignName = "sessionCampaignName"
-	// DimensionSessionDefaultChannelGroup : The session's default channel group is based primarily on source and medium. An enumeration which includes 'Direct', 'Organic Search', 'Paid Social', 'Organic Social', 'Email', 'Affiliates', 'Referral', 'Paid Search', 'Video', and 'Display'.
+	// DimensionSessionCm360AccountID : The CM360 Account ID that led to the session. Identifies the CM360 account.
+	DimensionSessionCm360AccountID = "sessionCm360AccountId"
+	// DimensionSessionCm360AccountName : The CM360 Account Name that led to the session. A CM360 account consists of advertisers, sites, campaigns, and user profiles.
+	DimensionSessionCm360AccountName = "sessionCm360AccountName"
+	// DimensionSessionCm360AdvertiserID : The CM360 Advertiser ID that led to the session. Identifies the CM360 advertiser.
+	DimensionSessionCm360AdvertiserID = "sessionCm360AdvertiserId"
+	// DimensionSessionCm360AdvertiserName : The CM360 Advertiser Name that led to the session. A CM360 Advertiser contains a group of campaigns, creative assets, and other settings.
+	DimensionSessionCm360AdvertiserName = "sessionCm360AdvertiserName"
+	// DimensionSessionCm360CampaignID : The CM360 Campaign ID that led to the session. Identifies the CM360 campaign.
+	DimensionSessionCm360CampaignID = "sessionCm360CampaignId"
+	// DimensionSessionCm360CampaignName : The CM360 Campaign Name that led to the session. A CM360 campaign can be configured to specify when your ads run, what landing pages are used, and other properties.
+	DimensionSessionCm360CampaignName = "sessionCm360CampaignName"
+	// DimensionSessionCm360CreativeFormat : The CM360 Creative Format that led to the session. CM360 creative formats are also referred to as creative types.
+	DimensionSessionCm360CreativeFormat = "sessionCm360CreativeFormat"
+	// DimensionSessionCm360CreativeID : The CM360 Creative ID that led to the session. Identifies a CM360 creative.
+	DimensionSessionCm360CreativeID = "sessionCm360CreativeId"
+	// DimensionSessionCm360CreativeName : The CM360 Creative Name that led to the session. The name given to a CM360 creative.
+	DimensionSessionCm360CreativeName = "sessionCm360CreativeName"
+	// DimensionSessionCm360CreativeType : The CM360 Creative Type that led to the session. A category of CM360 creatives like 'Display' or 'Tracking'. To learn more, see [manage creatives](https://support.google.com/campaignmanager/answer/3068258)
+	DimensionSessionCm360CreativeType = "sessionCm360CreativeType"
+	// DimensionSessionCm360CreativeTypeID : The CM360 Creative Type ID that led to the session. Identifies a CM360 creative type.
+	DimensionSessionCm360CreativeTypeID = "sessionCm360CreativeTypeId"
+	// DimensionSessionCm360CreativeVersion : The CM360 Creative Version that led to the session. The version number helps you keep track of multiple versions of your creative in your reports. If you upload a new asset to an existing creative, the version number is increased by one.
+	DimensionSessionCm360CreativeVersion = "sessionCm360CreativeVersion"
+	// DimensionSessionCm360Medium : The CM360 Medium that led to the session. The CM360 medium is also referred to as the placement cost structure.
+	DimensionSessionCm360Medium = "sessionCm360Medium"
+	// DimensionSessionCm360PlacementCostStructure : The CM360 Placement Cost Structure that led to the session. Placement cost structures regulate how media cost will be calculated. For example 'CPM'.
+	DimensionSessionCm360PlacementCostStructure = "sessionCm360PlacementCostStructure"
+	// DimensionSessionCm360PlacementID : The CM360 Placement ID that led to the session. Identifies a CM360 placement. A placement is the part of a website where your ad appears.
+	DimensionSessionCm360PlacementID = "sessionCm360PlacementId"
+	// DimensionSessionCm360PlacementName : The CM360 Placement Name that led to the session. The given name for a CM360 placement. A placement is the part of a website where your ad appears.
+	DimensionSessionCm360PlacementName = "sessionCm360PlacementName"
+	// DimensionSessionCm360RenderingID : The CM360 Rendering ID that led to the session. Identifies a CM360 creative.
+	DimensionSessionCm360RenderingID = "sessionCm360RenderingId"
+	// DimensionSessionCm360SiteID : The CM360 Site ID that led to the session. Identifies a CM360 site.
+	DimensionSessionCm360SiteID = "sessionCm360SiteId"
+	// DimensionSessionCm360SiteName : The CM360 Site Name that led to the session. The CM360 Site name from which the ad space was purchased.
+	DimensionSessionCm360SiteName = "sessionCm360SiteName"
+	// DimensionSessionCm360Source : The CM360 Source that led to the session. The CM360 source is also referred to as the site name.
+	DimensionSessionCm360Source = "sessionCm360Source"
+	// DimensionSessionCm360SourceMedium : The CM360 Source Medium that led to the session. A combination of the source and medium.
+	DimensionSessionCm360SourceMedium = "sessionCm360SourceMedium"
+	// DimensionSessionDefaultChannelGroup : The session's default channel group is based primarily on source and medium. An enumeration which includes `Direct`, `Organic Search`, `Paid Social`, `Organic Social`, `Email`, `Affiliates`, `Referral`, `Paid Search`, `Video`, and `Display`.
 	DimensionSessionDefaultChannelGroup = "sessionDefaultChannelGroup"
+	// DimensionSessionDv360AdvertiserID : The DV360 Advertiser ID that led to the session. Identifies the DV360 advertiser.
+	DimensionSessionDv360AdvertiserID = "sessionDv360AdvertiserId"
+	// DimensionSessionDv360AdvertiserName : The DV360 Advertiser Name that led to the session. DV360 advertisers represent real-life businesses that run advertising campaigns.
+	DimensionSessionDv360AdvertiserName = "sessionDv360AdvertiserName"
+	// DimensionSessionDv360CampaignID : The DV360 Campaign ID that led to the session. Identifies the DV360 campaign.
+	DimensionSessionDv360CampaignID = "sessionDv360CampaignId"
+	// DimensionSessionDv360CampaignName : The DV360 Campaign Name that led to the session. DV360 campaigns group together related insertion orders with a common business goal.
+	DimensionSessionDv360CampaignName = "sessionDv360CampaignName"
+	// DimensionSessionDv360CreativeFormat : The DV360 Creative Format that led to the session. Also referred to as the creative type. For example, expandable, video, or native.
+	DimensionSessionDv360CreativeFormat = "sessionDv360CreativeFormat"
+	// DimensionSessionDv360CreativeID : The DV360 Creative ID that led to the session. Identifies the DV360 creative.
+	DimensionSessionDv360CreativeID = "sessionDv360CreativeId"
+	// DimensionSessionDv360CreativeName : The DV360 Creative Name that led to the session. The name given to a DV360 creative.
+	DimensionSessionDv360CreativeName = "sessionDv360CreativeName"
+	// DimensionSessionDv360ExchangeID : The DV360 Exchange ID that led to the session. Identifies the DV360 exchange.
+	DimensionSessionDv360ExchangeID = "sessionDv360ExchangeId"
+	// DimensionSessionDv360ExchangeName : The DV360 Exchange Name that led to the session. The DV360 ad exchange involved in the ad click. To learn more, see [managing exchanges](https://support.google.com/displayvideo/answer/9230278).
+	DimensionSessionDv360ExchangeName = "sessionDv360ExchangeName"
+	// DimensionSessionDv360InsertionOrderID : The DV360 Insertion Order ID that led to the session. Identifies the DV360 insertion order.
+	DimensionSessionDv360InsertionOrderID = "sessionDv360InsertionOrderId"
+	// DimensionSessionDv360InsertionOrderName : The DV360 Insertion Order Name that led to the session. A DV360 insertion order contains a set of line items that are related to the same advertising campaign.
+	DimensionSessionDv360InsertionOrderName = "sessionDv360InsertionOrderName"
+	// DimensionSessionDv360LineItemID : The DV360 Line Item ID that led to the session. Identifies the DV360 line item.
+	DimensionSessionDv360LineItemID = "sessionDv360LineItemId"
+	// DimensionSessionDv360LineItemName : The DV360 Line Item Name that led to the session. A DV360 line item bids on impressions and serves creatives to inventory sources.
+	DimensionSessionDv360LineItemName = "sessionDv360LineItemName"
+	// DimensionSessionDv360Medium : The DV360 Medium that led to the session. The billable outcome of the insertion order. For example, `cpm`.
+	DimensionSessionDv360Medium = "sessionDv360Medium"
+	// DimensionSessionDv360PartnerID : The DV360 Partner ID that led to the session. Identifies the DV360 partner.
+	DimensionSessionDv360PartnerID = "sessionDv360PartnerId"
+	// DimensionSessionDv360PartnerName : The DV360 Partner Name that led to the session. DV360 partners represent agencies, trading desks, or large individual advertisers.
+	DimensionSessionDv360PartnerName = "sessionDv360PartnerName"
+	// DimensionSessionDv360Source : The DV360 Source that led to the session. The DV360 site name where your ad was displayed.
+	DimensionSessionDv360Source = "sessionDv360Source"
+	// DimensionSessionDv360SourceMedium : The DV360 Source Medium that led to the session. A combination of the source and medium.
+	DimensionSessionDv360SourceMedium = "sessionDv360SourceMedium"
 	// DimensionSessionGoogleAdsAccountName : The Account name from Google Ads that led to the session. Corresponds to customer.descriptive_name in the Google Ads API.
 	DimensionSessionGoogleAdsAccountName = "sessionGoogleAdsAccountName"
 	// DimensionSessionGoogleAdsAdGroupID : The Ad Group Id in Google Ads for a session.
 	DimensionSessionGoogleAdsAdGroupID = "sessionGoogleAdsAdGroupId"
 	// DimensionSessionGoogleAdsAdGroupName : The Ad Group Name in Google Ads for a session.
 	DimensionSessionGoogleAdsAdGroupName = "sessionGoogleAdsAdGroupName"
-	// DimensionSessionGoogleAdsAdNetworkType : The advertising network that led to the session. An enumeration which includes 'Google search', 'Search partners', 'Google Display Network', 'Youtube Search', 'Youtube Videos', 'Cross-network', 'Social', and '(universal campaign)'.
+	// DimensionSessionGoogleAdsAdNetworkType : The advertising network that led to the session. An enumeration which includes `Google search`, `Search partners`, `Google Display Network`, `Youtube Search`, `Youtube Videos`, `Cross-network`, `Social`, and `(universal campaign)`.
 	DimensionSessionGoogleAdsAdNetworkType = "sessionGoogleAdsAdNetworkType"
 	// DimensionSessionGoogleAdsCampaignID : The Campaign ID for the Google Ads Campaign that led to this session.
 	DimensionSessionGoogleAdsCampaignID = "sessionGoogleAdsCampaignId"
 	// DimensionSessionGoogleAdsCampaignName : The Campaign name for the Google Ads Campaign that led to this session.
 	DimensionSessionGoogleAdsCampaignName = "sessionGoogleAdsCampaignName"
-	// DimensionSessionGoogleAdsCampaignType : The campaign type for the Google Ads campaign that led to this session. Campaign types determine where customers see your ads and the settings and options available to you in Google Ads. Campaign type is an enumeration that includes: Search, Display, Shopping, Video, Discovery, App, Smart, Hotel, Local, and Performance Max. To learn more, see <https://support.google.com/google-ads/answer/2567043>.
+	// DimensionSessionGoogleAdsCampaignType : The campaign type for the Google Ads campaign that led to this session. Campaign types determine where customers see your ads and the settings and options available to you in Google Ads. Campaign type is an enumeration that includes: Search, Display, Shopping, Video, Demand Gen, App, Smart, Hotel, Local, and Performance Max. To learn more, see [Choose the right campaign type](https://support.google.com/google-ads/answer/2567043).
 	DimensionSessionGoogleAdsCampaignType = "sessionGoogleAdsCampaignType"
-	// DimensionSessionGoogleAdsCreativeID : The ID of the Google Ads creative that lead to a session on your website or app. Creative IDs identify individual ads.
+	// DimensionSessionGoogleAdsCreativeID : The ID of the Google Ads creative that led to a session on your website or app. Creative IDs identify individual ads.
 	DimensionSessionGoogleAdsCreativeID = "sessionGoogleAdsCreativeId"
 	// DimensionSessionGoogleAdsCustomerID : The Customer ID from Google Ads that led to the session. Customer IDs in Google Ads uniquely identify Google Ads accounts.
 	DimensionSessionGoogleAdsCustomerID = "sessionGoogleAdsCustomerId"
-	// DimensionSessionGoogleAdsKeyword : The matched keyword that led to the session. Keywords are words or phrases describing your product or service that you choose to get your ad in front of the right customers. To learn more about Keywords, see <https://support.google.com/google-ads/answer/6323>.
+	// DimensionSessionGoogleAdsKeyword : The matched keyword that led to the session. Keywords are words or phrases describing your product or service that you choose to get your ad in front of the right customers. To learn more about Keywords, see [Keywords: Definition](https://support.google.com/google-ads/answer/6323).
 	DimensionSessionGoogleAdsKeyword = "sessionGoogleAdsKeyword"
 	// DimensionSessionGoogleAdsQuery : The search query that led to the session.
 	DimensionSessionGoogleAdsQuery = "sessionGoogleAdsQuery"
 	// DimensionSessionManualAdContent : The ad content that led to a session. Populated by the utm_content parameter.
 	DimensionSessionManualAdContent = "sessionManualAdContent"
+	// DimensionSessionManualCampaignID : The manual Campaign ID that led to the session. Identifies the manual campaign. Populated by `utm_id` URL parameter.
+	DimensionSessionManualCampaignID = "sessionManualCampaignId"
+	// DimensionSessionManualCampaignName : The manual Campaign Name that led to the session. The name of the manual campaign. Populated by `utm_campaign` URL parameter. To learn more, see [Collect campaign data with custom URLs](https://support.google.com/analytics/answer/10917952).
+	DimensionSessionManualCampaignName = "sessionManualCampaignName"
+	// DimensionSessionManualCreativeFormat : The manual Creative Format that led to the session. Identifies the creative format used in the ad. Populated by `utm_creative_format` URL parameter.
+	DimensionSessionManualCreativeFormat = "sessionManualCreativeFormat"
+	// DimensionSessionManualMarketingTactic : The manual Marketing Tactic that led to the session. The targeting criteria applied to a campaign. For example, remarketing or prospecting. Populated by `utm_marketing_tactic` URL parameter.
+	DimensionSessionManualMarketingTactic = "sessionManualMarketingTactic"
+	// DimensionSessionManualMedium : The manual Medium that led to the session. The marketing medium used in the referral. For example, `cpc`. Populated by `utm_medium` URL parameter.
+	DimensionSessionManualMedium = "sessionManualMedium"
+	// DimensionSessionManualSource : The manual Source that led to the session. The referrer. Populated by `utm_source` URL parameter.
+	DimensionSessionManualSource = "sessionManualSource"
+	// DimensionSessionManualSourceMedium : The manual Source Medium that led to the session. A combination of the source and medium.
+	DimensionSessionManualSourceMedium = "sessionManualSourceMedium"
+	// DimensionSessionManualSourcePlatform : The manual Source Platform that led to the session. The platform responsible for directing traffic to a given Analytics property. Populated by `utm_source_platform` URL parameter.
+	DimensionSessionManualSourcePlatform = "sessionManualSourcePlatform"
 	// DimensionSessionManualTerm : The term that led to a session. Populated by the utm_term parameter.
 	DimensionSessionManualTerm = "sessionManualTerm"
 	// DimensionSessionMedium : The medium that initiated a session on your website or app.
 	DimensionSessionMedium = "sessionMedium"
-	// DimensionSessionSa360AdGroupName : The Ad Group name from Search Ads 360 that led to this session.
+	// DimensionSessionPrimaryChannelGroup : The primary channel group that led to the session. Primary channel groups are the channel groups used in standard reports in Google Analytics and serve as an active record of your property's data in alignment with channel grouping over time. To learn more, see [Custom channel groups](https://support.google.com/analytics/answer/13051316).
+	DimensionSessionPrimaryChannelGroup = "sessionPrimaryChannelGroup"
+	// DimensionSessionSa360AdGroupID : The SA360 Ad Group ID that led to the session. Identifies the SA360 ad group.
+	DimensionSessionSa360AdGroupID = "sessionSa360AdGroupId"
+	// DimensionSessionSa360AdGroupName : The SA360 Ad Group Name that led to the session. SA360 Ad groups contain ads and keywords that relate to each other.
 	DimensionSessionSa360AdGroupName = "sessionSa360AdGroupName"
-	// DimensionSessionSa360CampaignID : The Campaign ID from Search Ads 360 that led to this session.
+	// DimensionSessionSa360CampaignID : The SA360 Campaign ID that led to the session. Identifies the SA360 campaign.
 	DimensionSessionSa360CampaignID = "sessionSa360CampaignId"
-	// DimensionSessionSa360CampaignName : The Campaign name from Search Ads 360 that led to this session.
+	// DimensionSessionSa360CampaignName : The SA360 Campaign Name that led to the session. A SA360 campaign lets you organize your ads and define a goal for your advertising.
 	DimensionSessionSa360CampaignName = "sessionSa360CampaignName"
-	// DimensionSessionSa360CreativeFormat : The type of creative in Search Ads 360 that led to this session. For example, 'Responsive search ad' or 'Expanded text ad'. To learn more, see [GA4 Traffic Source Dimensions](https://support.google.com/analytics/answer/9143382#traffic-source).
+	// DimensionSessionSa360CreativeFormat : The SA360 Creative Format that led to the session. The creative format is the specific layout or design of the advertisement used in a campaign.
 	DimensionSessionSa360CreativeFormat = "sessionSa360CreativeFormat"
-	// DimensionSessionSa360EngineAccountID : The ID of the engine account in SA360 that led to this session.
+	// DimensionSessionSa360EngineAccountID : The SA360 Engine Account ID that led to the session. Identifies the SA360 engine account.
 	DimensionSessionSa360EngineAccountID = "sessionSa360EngineAccountId"
-	// DimensionSessionSa360EngineAccountName : The name of the engine account in SA360 that led to this session.
+	// DimensionSessionSa360EngineAccountName : The SA360 Engine Account Name that led to the session. A SA360 engine account contains campaigns, ad groups, and other items from an advertising account. To learn more, see [SA360 engine account](https://support.google.com/searchads/answer/4497746).
 	DimensionSessionSa360EngineAccountName = "sessionSa360EngineAccountName"
-	// DimensionSessionSa360EngineAccountType : The type of the engine account in Search Ads 360 that led to this session. For example, 'google ads', 'bing', or 'baidu'.
+	// DimensionSessionSa360EngineAccountType : The SA360 Engine Account Type that led to the session. The type of engine used by the search engine account. For example, `google ads`, `bing`, or `baidu`.
 	DimensionSessionSa360EngineAccountType = "sessionSa360EngineAccountType"
-	// DimensionSessionSa360Keyword : The search engine keyword from Search Ads 360 that led to this session.
+	// DimensionSessionSa360Keyword : The SA360 Keyword Text that led to the session. The keywords that matched the search query.
 	DimensionSessionSa360Keyword = "sessionSa360Keyword"
-	// DimensionSessionSa360Medium : The search engine keyword from Search Ads 360 that led to this session. For example, 'cpc'.
+	// DimensionSessionSa360ManagerAccountID : The SA360 Manager Account ID that led to the session. Identifies the SA360 manager account.
+	DimensionSessionSa360ManagerAccountID = "sessionSa360ManagerAccountId"
+	// DimensionSessionSa360ManagerAccountName : The SA360 Manager Account Name that led to the session. The top level of the Search Ads 360 account hierarchy and is used for administration and reporting across the lower-level sub-manager and client accounts.
+	DimensionSessionSa360ManagerAccountName = "sessionSa360ManagerAccountName"
+	// DimensionSessionSa360Medium : The SA360 Medium that led to the session. The payment mode used in ad buying. For example, `cpc`.
 	DimensionSessionSa360Medium = "sessionSa360Medium"
-	// DimensionSessionSa360Query : The search query from Search Ads 360 that led to this session.
+	// DimensionSessionSa360Query : The SA360 Query that led to the session. The search query typed by the user.
 	DimensionSessionSa360Query = "sessionSa360Query"
-	// DimensionSessionSa360Source : The source of the traffic from Search Ads 360 that led to this session. For example, 'example.com' or 'google'.
+	// DimensionSessionSa360Source : The SA360 Source that led to the session. The search query happened on this site.
 	DimensionSessionSa360Source = "sessionSa360Source"
+	// DimensionSessionSa360SourceMedium : The SA360 Source Medium that led to the session. A combination of the source and medium.
+	DimensionSessionSa360SourceMedium = "sessionSa360SourceMedium"
 	// DimensionSessionSource : The source that initiated a session on your website or app.
 	DimensionSessionSource = "sessionSource"
-	// DimensionSessionSourceMedium : The combined values of the dimensions 'sessionSource' and 'sessionMedium'.
+	// DimensionSessionSourceMedium : The combined values of the dimensions `sessionSource` and `sessionMedium`.
 	DimensionSessionSourceMedium = "sessionSourceMedium"
-	// DimensionSessionSourcePlatform : The source platform of the session's campaign. Please do not depend on this field returning 'Manual' for traffic that uses UTMs; this field will update from returning 'Manual' to returning '(not set)' for an upcoming feature launch.
+	// DimensionSessionSourcePlatform : The source platform of the session's campaign. Don't depend on this field returning `Manual` for traffic that uses UTMs; this field will update from returning `Manual` to returning `(not set)` for an upcoming feature launch.
 	DimensionSessionSourcePlatform = "sessionSourcePlatform"
-	// DimensionShippingTier : The shipping tier (e.g. Ground, Air, Next-day) selected for delivery of the purchased item. Populated by the 'shipping_tier' event parameter.
+	// DimensionShippingTier : The shipping tier selected for delivery of the purchased item. For example, `Ground`, `Air`, or `Next-day`. Populated by the `shipping_tier` event parameter.
 	DimensionShippingTier = "shippingTier"
-	// DimensionSignedInWithUserID : The string 'yes' if the user signed in with the User-ID feature. To learn more about User-ID, see <https://support.google.com/analytics/answer/9213390>.
+	// DimensionSignedInWithUserID : The string `yes` if the user signed in with the User-ID feature. To learn more about User-ID, see [Measure activity across platforms with User-ID](https://support.google.com/analytics/answer/9213390).
 	DimensionSignedInWithUserID = "signedInWithUserId"
-	// DimensionSource : The source attributed to the conversion event.
+	// DimensionSource : The source attributed to the key event.
 	DimensionSource = "source"
-	// DimensionSourceMedium : The combined values of the dimensions 'source' and 'medium'.
+	// DimensionSourceMedium : The combined values of the dimensions `source` and `medium`.
 	DimensionSourceMedium = "sourceMedium"
-	// DimensionSourcePlatform : The source platform of the conversion event's campaign. Please do not depend on this field returning 'Manual' for traffic that uses UTMs; this field will update from returning 'Manual' to returning '(not set)' for an upcoming feature launch.
+	// DimensionSourcePlatform : The source platform of the key event's campaign. Don't depend on this field returning `Manual` for traffic that uses UTMs; this field will update from returning `Manual` to returning `(not set)` for an upcoming feature launch.
 	DimensionSourcePlatform = "sourcePlatform"
 	// DimensionStreamID : The numeric data stream identifier for your app or website.
 	DimensionStreamID = "streamId"
 	// DimensionStreamName : The data stream name for your app or website.
 	DimensionStreamName = "streamName"
-	// DimensionTestDataFilterName : The name of data filters in testing state. You use data filters to include or exclude event data from your reports based on event-parameter values. To learn more, see <https://support.google.com/analytics/answer/10108813>.
+	// DimensionTestDataFilterID : The numeric identifier of a data filter in testing state. You use data filters to include or exclude event data from your reports based on event-parameter values. To learn more, see [Data filters](https://support.google.com/analytics/answer/10108813).
+	DimensionTestDataFilterID = "testDataFilterId"
+	// DimensionTestDataFilterName : The name of data filters in testing state. You use data filters to include or exclude event data from your reports based on event-parameter values. To learn more, see [Data filters](https://support.google.com/analytics/answer/10108813).
 	DimensionTestDataFilterName = "testDataFilterName"
 	// DimensionTransactionID : The ID of the ecommerce transaction.
 	DimensionTransactionID = "transactionId"
@@ -348,20 +730,24 @@ const (
 	DimensionUserAgeBracket = "userAgeBracket"
 	// DimensionUserGender : User gender.
 	DimensionUserGender = "userGender"
-	// DimensionVideoProvider : The source of the video (for example, 'youtube'). Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter 'video_provider'.
+	// DimensionVideoProvider : The source of the video (for example, `youtube`). Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter `video_provider`.
 	DimensionVideoProvider = "videoProvider"
-	// DimensionVideoTitle : The title of the video. Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter 'video_title'.
+	// DimensionVideoTitle : The title of the video. Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter `video_title`.
 	DimensionVideoTitle = "videoTitle"
-	// DimensionVideoUrl : The url of the video. Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter 'video_url'.
+	// DimensionVideoUrl : The URL of the video. Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter `video_url`.
 	DimensionVideoUrl = "videoUrl"
-	// DimensionVirtualCurrencyName : The name of a virtual currency with which the user is interacting. i.e. spending or purchasing gems in a game. Populated by the 'virtual_currency_name' event parameter.
+	// DimensionVirtualCurrencyName : The name of a virtual currency with which the user is interacting. Such as spending or purchasing gems in a game. Populated by the `virtual_currency_name` event parameter.
 	DimensionVirtualCurrencyName = "virtualCurrencyName"
-	// DimensionVisible : Returns 'true' if the content is visible. Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter 'visible'.
+	// DimensionVisible : Returns `true` if the content is visible. Automatically populated for embedded videos if Enhanced Measurement is enabled. Populated by the event parameter `visible`.
 	DimensionVisible = "visible"
 	// DimensionWeek : The week of the event, a two-digit number from 01 to 53. Each week starts on Sunday. January 1st is always in week 01. The first and last week of the year have fewer than 7 days in most years. Weeks other than the first and the last week of the year always have 7 days. For years where January 1st is a Sunday, the first week of that year and the last week of the prior year have 7 days.
 	DimensionWeek = "week"
-	// DimensionYear : The four-digit year of the event e.g. 2020.
+	// DimensionYear : The four-digit year of the event. For example, 2020 or 2024.
 	DimensionYear = "year"
+	// DimensionYearMonth : The combined values of year and month. Example values include 202212 or 202301.
+	DimensionYearMonth = "yearMonth"
+	// DimensionYearWeek : The combined values of year and week. Example values include 202253 or 202301.
+	DimensionYearWeek = "yearWeek"
 	// MetricActive1DayUsers : The number of distinct active users on your site or app within a 1 day period. The 1 day period includes the last day in the report's date range. Note: this is the same as Active Users.
 	MetricActive1DayUsers = "active1DayUsers"
 	// MetricActive28DayUsers : The number of distinct active users on your site or app within a 28 day period. The 28 day period includes the last day in the report's date range.
@@ -380,8 +766,8 @@ const (
 	MetricAdvertiserAdCost = "advertiserAdCost"
 	// MetricAdvertiserAdCostPerClick : Ads cost per click is ad cost divided by ad clicks and is often abbreviated CPC.
 	MetricAdvertiserAdCostPerClick = "advertiserAdCostPerClick"
-	// MetricAdvertiserAdCostPerConversion : Cost per conversion is ad cost divided by conversions.
-	MetricAdvertiserAdCostPerConversion = "advertiserAdCostPerConversion"
+	// MetricAdvertiserAdCostPerKeyEvent : Cost per key event is ad cost divided by key events.
+	MetricAdvertiserAdCostPerKeyEvent = "advertiserAdCostPerKeyEvent"
 	// MetricAdvertiserAdImpressions : The total number of impressions. Includes impressions from linked integrations like linked Display & Video 360 advertisers. Also includes uploaded impressions from data import.
 	MetricAdvertiserAdImpressions = "advertiserAdImpressions"
 	// MetricAveragePurchaseRevenue : The average purchase revenue in the transaction group of events.
@@ -392,20 +778,18 @@ const (
 	MetricAveragePurchaseRevenuePerUser = "averagePurchaseRevenuePerUser"
 	// MetricAverageRevenuePerUser : Average revenue per active user (ARPU). The summary metric is for the time period selected. ARPU uses Total Revenue and includes AdMob estimated earnings.
 	MetricAverageRevenuePerUser = "averageRevenuePerUser"
-	// MetricAverageSessionDuration : The average duration (in seconds) of users' sessions.
+	// MetricAverageSessionDuration : The average duration (in seconds) of users` sessions.
 	MetricAverageSessionDuration = "averageSessionDuration"
 	// MetricBounceRate : The percentage of sessions that were not engaged ((Sessions Minus Engaged sessions) divided by Sessions). This metric is returned as a fraction; for example, 0.2761 means 27.61% of sessions were bounces.
 	MetricBounceRate = "bounceRate"
 	// MetricCartToViewRate : The number of users who added a product(s) to their cart divided by the number of users who viewed the same product(s). This metric is returned as a fraction; for example, 0.1132 means 11.32% of users who viewed a product also added the same product to their cart.
 	MetricCartToViewRate = "cartToViewRate"
-	// MetricCheckouts : The number of times users started the checkout process. This metric counts the occurrence of the 'begin_checkout' event.
+	// MetricCheckouts : The number of times users started the checkout process. This metric counts the occurrence of the `begin_checkout` event.
 	MetricCheckouts = "checkouts"
-	// MetricCohortActiveUsers : The number of users in the cohort who are active in the time window corresponding to the cohort nth day/week/month. For example for the row where cohortNthWeek = 0001, this metric is the number of users (in the cohort) who are active in week 1.
+	// MetricCohortActiveUsers : The number of users in the cohort who are active in the time window corresponding to the cohort nth day/week/month. For example in the row where cohortNthWeek = 0001, this metric is the number of users (in the cohort) who are active in week 1.
 	MetricCohortActiveUsers = "cohortActiveUsers"
-	// MetricCohortTotalUsers : The total number of users in the cohort. This metric is the same value in every row of the report for each cohort. Because cohorts are defined by a shared acquisition date, cohortTotalUsers is the same as cohortActiveUsers for the cohort's selection date range. For report rows later than the ochort's selection range, it is typical for cohortActiveUsers to be smaller than cohortTotalUsers. This difference represents users from the cohort that were not active for the later date. cohortTotalUsers is commonly used in the metric expression cohortActiveUsers/cohortTotalUsers to compute a user retention fraction for the cohort. The relationship between activeUsers and totalUsers is not equivalent to the relationship between cohortActiveUsers and cohortTotalUsers.
+	// MetricCohortTotalUsers : The total number of users in the cohort. This metric is the same value in every row of the report for each cohort. Because cohorts are defined by a shared acquisition date, cohortTotalUsers is the same as cohortActiveUsers for the cohort's selection date range. For report rows later than the cohort's selection range, it is typical for cohortActiveUsers to be smaller than cohortTotalUsers. This difference represents users from the cohort that were not active for the later date. cohortTotalUsers is commonly used in the metric expression cohortActiveUsers/cohortTotalUsers to compute a user retention fraction for the cohort. The relationship between activeUsers and totalUsers is not equivalent to the relationship between cohortActiveUsers and cohortTotalUsers.
 	MetricCohortTotalUsers = "cohortTotalUsers"
-	// MetricConversions : The count of conversion events. Events are marked as conversions at collection time; changes to an event's conversion marking apply going forward. You can mark any event as a conversion in Google Analytics, and some events (i.e. first_open, purchase) are marked as conversions by default. To learn more, see <https://support.google.com/analytics/answer/9267568>.
-	MetricConversions = "conversions"
 	// MetricCrashAffectedUsers : The number of users that logged a crash in this row of the report. For example if the report is time series by date, this metrics reports total users with at least one crash on this date. Crashes are events with the name "app_exception".
 	MetricCrashAffectedUsers = "crashAffectedUsers"
 	// MetricCrashFreeUsersRate : The number of users without crash events (in this row of the report) divided by the total number of users. This metric is returned as a fraction; for example, 0.9243 means 92.43% of users were crash-free.
@@ -414,9 +798,9 @@ const (
 	MetricDauPerMau = "dauPerMau"
 	// MetricDauPerWau : The rolling percent of 7-day active users who are also 1-day active users. This metric is returned as a fraction; for example, 0.082 means 8.2% of 7-day active users were also 1-day active users.
 	MetricDauPerWau = "dauPerWau"
-	// MetricEcommercePurchases : The number of times users completed a purchase. This metric counts 'purchase' events; this metric does not count 'in_app_purchase' and subscription events.
+	// MetricEcommercePurchases : The number of times users completed a purchase. This metric counts `purchase` events; this metric does not count `in_app_purchase` and subscription events.
 	MetricEcommercePurchases = "ecommercePurchases"
-	// MetricEngagedSessions : The number of sessions that lasted longer than 10 seconds, or had a conversion event, or had 2 or more screen views.
+	// MetricEngagedSessions : The number of sessions that lasted longer than 10 seconds, or had a key event, or had 2 or more screen views.
 	MetricEngagedSessions = "engagedSessions"
 	// MetricEngagementRate : The percentage of engaged sessions (Engaged sessions divided by Sessions). This metric is returned as a fraction; for example, 0.7239 means 72.39% of sessions were engaged sessions.
 	MetricEngagementRate = "engagementRate"
@@ -426,42 +810,52 @@ const (
 	MetricEventCountPerUser = "eventCountPerUser"
 	// MetricEventsPerSession : The average number of events per session (Event count divided by Sessions).
 	MetricEventsPerSession = "eventsPerSession"
-	// MetricEventValue : The sum of the event parameter named 'value'.
+	// MetricEventValue : The sum of the event parameter named `value`.
 	MetricEventValue = "eventValue"
-	// MetricFirstTimePurchaserConversionRate : The percentage of active users who made their first purchase. This metric is returned as a fraction; for example, 0.092 means 9.2% of active users were first time purchasers.
-	MetricFirstTimePurchaserConversionRate = "firstTimePurchaserConversionRate"
+	// MetricFirstTimePurchaserRate : The percentage of active users who made their first purchase. This metric is returned as a fraction; for example, 0.092 means 9.2% of active users were first time purchasers.
+	MetricFirstTimePurchaserRate = "firstTimePurchaserRate"
 	// MetricFirstTimePurchasers : The number of users that completed their first purchase event.
 	MetricFirstTimePurchasers = "firstTimePurchasers"
 	// MetricFirstTimePurchasersPerNewUser : The average number of first time purchasers per new user.
 	MetricFirstTimePurchasersPerNewUser = "firstTimePurchasersPerNewUser"
-	// MetricItemListClickEvents : The number of times users clicked an item when it appeared in a list. This metric counts the occurrence of the 'select_item' event.
+	// MetricGrossItemRevenue : The total revenue from items only. Gross item revenue is the product of its price and quantity. Item revenue excludes tax and shipping values; tax & shipping values are specified at the event and not item level. Gross item revenue does not include refunds.
+	MetricGrossItemRevenue = "grossItemRevenue"
+	// MetricGrossPurchaseRevenue : The sum of revenue from purchases made in your app or site. Gross purchase revenue sums the revenue for these events: `purchase`, `ecommerce_purchase`, `in_app_purchase`, `app_store_subscription_convert`, and `app_store_subscription_renew`. Purchase revenue is specified by the `value` parameter in tagging.
+	MetricGrossPurchaseRevenue = "grossPurchaseRevenue"
+	// MetricItemDiscountAmount : The monetary value of item discounts in eCommerce events. This metric is populated in tagging by the `discount` item parameter.
+	MetricItemDiscountAmount = "itemDiscountAmount"
+	// MetricItemListClickEvents : The number of times users clicked an item when it appeared in a list. This metric counts the occurrence of the `select_item` event.
 	MetricItemListClickEvents = "itemListClickEvents"
 	// MetricItemListClickThroughRate : The number of users who selected a list(s) divided by the number of users who viewed the same list(s). This metric is returned as a fraction; for example, 0.2145 means 21.45% of users who viewed a list also selected the same list.
 	MetricItemListClickThroughRate = "itemListClickThroughRate"
-	// MetricItemListViewEvents : The number of times the item list was viewed. This metric counts the occurrence of the 'view_item_list' event.
+	// MetricItemListViewEvents : The number of times the item list was viewed. This metric counts the occurrence of the `view_item_list` event.
 	MetricItemListViewEvents = "itemListViewEvents"
 	// MetricItemPromotionClickThroughRate : The number of users who selected a promotion(s) divided by the number of users who viewed the same promotion(s). This metric is returned as a fraction; for example, 0.1382 means 13.82% of users who viewed a promotion also selected the promotion.
 	MetricItemPromotionClickThroughRate = "itemPromotionClickThroughRate"
-	// MetricItemRevenue : The total revenue from items only. Item revenue is the product of its price and quantity. Item revenue excludes tax and shipping values; tax & shipping values are specified at the event and not item level.
+	// MetricItemRefundAmount : Item refund amount is the total refunded transaction revenue from items only. Item refund amount is the product of price and quantity for the `refund` event.
+	MetricItemRefundAmount = "itemRefundAmount"
+	// MetricItemRevenue : The total revenue from purchases minus refunded transaction revenue from items only. Item revenue is the product of its price and quantity. Item revenue excludes tax and shipping values; tax & shipping values are specified at the event and not item level.
 	MetricItemRevenue = "itemRevenue"
-	// MetricItemsAddedToCart : The number of units added to cart for a single item. This metric counts the quantity of items in 'add_to_cart' events.
+	// MetricItemsAddedToCart : The number of units added to cart for a single item. This metric counts the quantity of items in `add_to_cart` events.
 	MetricItemsAddedToCart = "itemsAddedToCart"
-	// MetricItemsCheckedOut : The number of units checked out for a single item. This metric counts the quantity of items in 'begin_checkout' events.
+	// MetricItemsCheckedOut : The number of units checked out for a single item. This metric counts the quantity of items in `begin_checkout` events.
 	MetricItemsCheckedOut = "itemsCheckedOut"
-	// MetricItemsClickedInList : The number of units clicked in list for a single item. This metric counts the quantity of items in 'select_item' events.
+	// MetricItemsClickedInList : The number of units clicked in list for a single item. This metric counts the quantity of items in `select_item` events.
 	MetricItemsClickedInList = "itemsClickedInList"
-	// MetricItemsClickedInPromotion : The number of units clicked in promotion for a single item. This metric counts the quantity of items in 'select_promotion' events.
+	// MetricItemsClickedInPromotion : The number of units clicked in promotion for a single item. This metric counts the quantity of items in `select_promotion` events.
 	MetricItemsClickedInPromotion = "itemsClickedInPromotion"
 	// MetricItemsPurchased : The number of units for a single item included in purchase events. This metric counts the quantity of items in purchase events.
 	MetricItemsPurchased = "itemsPurchased"
-	// MetricItemsViewed : The number of units viewed for a single item. This metric counts the quantity of items in 'view_item' events.
+	// MetricItemsViewed : The number of units viewed for a single item. This metric counts the quantity of items in `view_item` events.
 	MetricItemsViewed = "itemsViewed"
-	// MetricItemsViewedInList : The number of units viewed in list for a single item. This metric counts the quantity of items in 'view_item_list' events.
+	// MetricItemsViewedInList : The number of units viewed in list for a single item. This metric counts the quantity of items in `view_item_list` events.
 	MetricItemsViewedInList = "itemsViewedInList"
-	// MetricItemsViewedInPromotion : The number of units viewed in promotion for a single item. This metric counts the quantity of items in 'view_promotion' events.
+	// MetricItemsViewedInPromotion : The number of units viewed in promotion for a single item. This metric counts the quantity of items in `view_promotion` events.
 	MetricItemsViewedInPromotion = "itemsViewedInPromotion"
-	// MetricItemViewEvents : The number of times the item details were viewed. The metric counts the occurrence of the 'view_item' event.
+	// MetricItemViewEvents : The number of times the item details were viewed. The metric counts the occurrence of the `view_item` event.
 	MetricItemViewEvents = "itemViewEvents"
+	// MetricKeyEvents : The count of key events. Marking an event as a key event affects reports from time of creation. It doesn't change historic data. You can mark any event as key in Google Analytics, and some events (such as `first_open` or `purchase`) are marked as key events by default.
+	MetricKeyEvents = "keyEvents"
 	// MetricNewUsers : The number of users who interacted with your site or launched your app for the first time (event triggered: first_open or first_visit).
 	MetricNewUsers = "newUsers"
 	// MetricOrganicGoogleSearchAveragePosition : The average ranking of your website URLs for the query reported from Search Console. For example, if your site's URL appears at position 3 for one query and position 7 for another query, the average position would be 5 (3+7/2). This metric requires an active Search Console link.
@@ -472,52 +866,58 @@ const (
 	MetricOrganicGoogleSearchClickThroughRate = "organicGoogleSearchClickThroughRate"
 	// MetricOrganicGoogleSearchImpressions : The number of organic Google Search impressions reported from Search Console. This metric requires an active Search Console link.
 	MetricOrganicGoogleSearchImpressions = "organicGoogleSearchImpressions"
-	// MetricPromotionClicks : The number of times an item promotion was clicked. This metric counts the occurrence of the 'select_promotion' event.
+	// MetricPromotionClicks : The number of times an item promotion was clicked. This metric counts the occurrence of the `select_promotion` event.
 	MetricPromotionClicks = "promotionClicks"
-	// MetricPromotionViews : The number of times an item promotion was viewed. This metric counts the occurrence of the 'view_promotion' event.
+	// MetricPromotionViews : The number of times an item promotion was viewed. This metric counts the occurrence of the `view_promotion` event.
 	MetricPromotionViews = "promotionViews"
 	// MetricPublisherAdClicks : The number of ad_click events.
 	MetricPublisherAdClicks = "publisherAdClicks"
 	// MetricPublisherAdImpressions : The number of ad_impression events.
 	MetricPublisherAdImpressions = "publisherAdImpressions"
-	// MetricPurchaserConversionRate : The percentage of active users who made 1 or more purchase transactions. This metric is returned as a fraction; for example, 0.412 means 41.2% of users were purchasers.
-	MetricPurchaserConversionRate = "purchaserConversionRate"
-	// MetricPurchaseRevenue : The sum of revenue from purchases made in your app or site. Purchase revenue sums the revenue for these events: 'purchase', 'ecommerce_purchase', 'in_app_purchase', 'app_store_subscription_convert', and 'app_store_subscription_renew'. Purchase revenue is specified by the 'value' parameter in tagging.
+	// MetricPurchaseRevenue : The sum of revenue from purchases minus refunded transaction revenue made in your app or site. Purchase revenue sums the revenue for these events: `purchase`, `ecommerce_purchase`, `in_app_purchase`, `app_store_subscription_convert`, and `app_store_subscription_renew`. Purchase revenue is specified by the `value` parameter in tagging.
 	MetricPurchaseRevenue = "purchaseRevenue"
+	// MetricPurchaserRate : The percentage of active users who made 1 or more purchase transactions. This metric is returned as a fraction; for example, 0.412 means 41.2% of users were purchasers.
+	MetricPurchaserRate = "purchaserRate"
 	// MetricPurchaseToViewRate : The number of users who purchased a product(s) divided by the number of users who viewed the same product(s). This metric is returned as a fraction; for example, 0.128 means 12.8% of users that viewed a product(s) also purchased the same product(s).
 	MetricPurchaseToViewRate = "purchaseToViewRate"
+	// MetricRefundAmount : The total refunded transaction revenues. Refund amount sums refunded revenue for the `refund` and `app_store_refund` events.
+	MetricRefundAmount = "refundAmount"
 	// MetricReturnOnAdSpend : Return On Ad Spend (ROAS) is total revenue divided by advertiser ad cost.
 	MetricReturnOnAdSpend = "returnOnAdSpend"
 	// MetricScreenPageViews : The number of app screens or web pages your users viewed. Repeated views of a single page or screen are counted. (screen_view + page_view events).
 	MetricScreenPageViews = "screenPageViews"
 	// MetricScreenPageViewsPerSession : The number of app screens or web pages your users viewed per session. Repeated views of a single page or screen are counted. (screen_view + page_view events) / sessions.
 	MetricScreenPageViewsPerSession = "screenPageViewsPerSession"
-	// MetricSessionConversionRate : The percentage of sessions in which any conversion event was triggered.
-	MetricSessionConversionRate = "sessionConversionRate"
+	// MetricScreenPageViewsPerUser : The number of app screens or web pages your users viewed per active user. Repeated views of a single page or screen are counted. (screen_view + page_view events) / active users.
+	MetricScreenPageViewsPerUser = "screenPageViewsPerUser"
+	// MetricScrolledUsers : The number of unique users who scrolled down at least 90% of the page.
+	MetricScrolledUsers = "scrolledUsers"
+	// MetricSessionKeyEventRate : The percentage of sessions in which any key event was triggered.
+	MetricSessionKeyEventRate = "sessionKeyEventRate"
 	// MetricSessions : The number of sessions that began on your site or app (event triggered: session_start).
 	MetricSessions = "sessions"
 	// MetricSessionsPerUser : The average number of sessions per user (Sessions divided by Active Users).
 	MetricSessionsPerUser = "sessionsPerUser"
-	// MetricShippingAmount : Shipping amount associated with a transaction. Populated by the 'shipping' event parameter.
+	// MetricShippingAmount : Shipping amount associated with a transaction. Populated by the `shipping` event parameter.
 	MetricShippingAmount = "shippingAmount"
-	// MetricTaxAmount : Tax amount associated with a transaction. Populated by the 'tax' event parameter.
+	// MetricTaxAmount : Tax amount associated with a transaction. Populated by the `tax` event parameter.
 	MetricTaxAmount = "taxAmount"
 	// MetricTotalAdRevenue : The total advertising revenue from both Admob and third-party sources.
 	MetricTotalAdRevenue = "totalAdRevenue"
 	// MetricTotalPurchasers : The number of users that logged purchase events for the time period selected.
 	MetricTotalPurchasers = "totalPurchasers"
-	// MetricTotalRevenue : The sum of revenue from purchases, subscriptions, and advertising (Purchase revenue plus Subscription revenue plus Ad revenue).
+	// MetricTotalRevenue : The sum of revenue from purchases, subscriptions, and advertising (Purchase revenue plus Subscription revenue plus Ad revenue) minus refunded transaction revenue.
 	MetricTotalRevenue = "totalRevenue"
 	// MetricTotalUsers : The number of distinct users who have logged at least one event, regardless of whether the site or app was in use when that event was logged.
 	MetricTotalUsers = "totalUsers"
 	// MetricTransactions : The count of transaction events with purchase revenue. Transaction events are in_app_purchase, ecommerce_purchase, purchase, app_store_subscription_renew, app_store_subscription_convert, and refund.
 	MetricTransactions = "transactions"
-	// MetricTransactionsPerPurchaser : The average numer of transactions per purchaser.
+	// MetricTransactionsPerPurchaser : The average number of transactions per purchaser.
 	MetricTransactionsPerPurchaser = "transactionsPerPurchaser"
-	// MetricUserConversionRate : The percentage of users who triggered any conversion event.
-	MetricUserConversionRate = "userConversionRate"
-	// MetricUserEngagementDuration : The total amount of time (in seconds) your website or app was in the foreground of users' devices.
+	// MetricUserEngagementDuration : The total amount of time (in seconds) your website or app was in the foreground of users` devices.
 	MetricUserEngagementDuration = "userEngagementDuration"
+	// MetricUserKeyEventRate : The percentage of users who triggered any key event.
+	MetricUserKeyEventRate = "userKeyEventRate"
 	// MetricWauPerMau : The rolling percent of 30-day active users who are also 7-day active users. This metric is returned as a fraction; for example, 0.234 means 23.4% of 30-day active users were also 7-day active users.
 	MetricWauPerMau = "wauPerMau"
 )
